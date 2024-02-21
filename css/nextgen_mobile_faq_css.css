@@ -1,0 +1,519 @@
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.svg#sc-sans-web-ultra-thin-italic") format("svg");
+	font-weight: 100;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.svg#sc-sans-web-light-italic") format("svg");
+	font-weight: 300;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.svg#sc-sans-web-thin") format("svg");
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.svg#sc-sans-web-regular") format("svg");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.svg#sc-sans-web-ultra-thin") format("svg");
+	font-weight: 100;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.svg#sc-sans-web-thin-italic") format("svg");
+	font-weight: 200;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.svg#sc-sans-web-bold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.svg#sc-sans-web-italic") format("svg");
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.svg#sc-sans-web-light") format("svg");
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'SC Sans Web';
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.eot");
+	src: url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.eot?#iefix") format("embedded-opentype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.woff2") format("woff2"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.woff") format("woff"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.ttf") format("truetype"), url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.svg#sc-sans-web-bold-italic") format("svg");
+	font-weight: 700;
+	font-style: italic;
+	font-stretch: normal;
+	font-display: swap
+}
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: "SC Sans Web", "SC Sans", Arial, sans-serif;
+}
+* {
+	box-sizing: border-box;
+	font-size: var(--fs15);
+	font-weight: 300;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+a {
+	text-decoration: none;
+}
+.img-responsive {
+	width: auto;
+	max-width: 100%;
+}
+.img-center {
+	display: block;
+	margin: auto;
+}
+select:focus, input:focus {
+	outline: none;
+}
+    /***************/
+    
+    /* width */
+    ::-webkit-scrollbar {
+width: 100%;
+height: 10px;
+}
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+background: #dcdcdc;
+border-radius: 5px;
+}
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+.hidden-xs {
+	display: block;
+}
+.hidden {
+	display: none !important;
+}
+.disable {
+	opacity: 0.2;
+	pointer-events: none;
+}
+input, select {
+	transition: all 0.5s ease-out;
+	opacity: 1;
+	color: #000;
+	background-color: #fff;
+	border-radius: 0;
+}
+.input_svg {
+	transition: all 0.5s ease-in-out;
+}
+header {
+	width: 100%;
+	height: 90px;
+}
+.full_w {
+	max-width: 1404px;
+	margin: auto;
+	padding: 0 var(--fs15);
+}
+.flexR {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+	justify-content: space-between;
+	align-items: center;
+}
+input, select {
+	transition: all 0.5s ease-out;
+	opacity: 1;
+	color: #000;
+	background-color: #fff;
+	border-radius: 0;
+}
+.input_svg {
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+input {
+	color: #868788;
+	width: 100%;
+	border: 0;
+	padding: 7px 0 10px;
+	font-size: var(--fs15);
+	margin-top: 5px;
+	background-color: transparent;
+	border-bottom: 1px solid #868788;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+svg {
+	z-index: 2;
+	transform: translate(50%, 50%);
+	position: absolute;
+	top: 6px;
+	right: 8px;
+}
+header .full_w {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+.sc-nav__logo {
+	width: 130px;
+	height: 51px;
+}
+.sc-nav__logo-link {
+	display: block;
+	background-size: 130px 51px;
+	background-image: url(https://av.sc.com/assets/global/images/components/header/standard-chartered-logo.svg);
+	background-position: left;
+	background-repeat: no-repeat;
+	opacity: 1;
+	background-color: #fff;
+	position: relative;
+	z-index: 9;
+	width: 130px;
+	height: 51px;
+}
+footer {
+	background-color: #2b2929;
+	color: #b7b7b7;
+	clear: both;
+	font-size: 12px !important;
+	font-weight: 300;
+	letter-spacing: .5px;
+	line-height: 15px;
+	padding: 30px 0;
+}
+footer span {
+	font-size: 12px !important;
+}
+footer a {
+	color: #fff !important;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+.result_area {
+	background-color: #f6f6f6;
+	width: 100%;
+	padding: 0 0 30px;
+	overflow-x: hidden;
+}
+.faq_section {
+	margin-bottom: 30px;
+	position: relative;
+}
+.faq_section h1 {
+	margin: 15px auto;
+	font-size: 26px;
+}
+:root {
+--fs15 : 15px;
+--theTOP : 115px;
+}
+.crtl {
+	width: 100%;
+	max-width: 320px;
+}
+.offsetT {
+	margin-top: var(--theTOP) !important;
+	padding-top: var(--fs15);
+}
+h1 {
+	font-size: 32px;
+	font-weight: 700;
+}
+h3 {
+	font-size: 16px;
+	margin: 10px 0;
+	font-weight: 700;
+	padding-right: 3em;
+}
+h5 {
+	margin: 10px 0;
+	padding-right: 3em;
+	font-weight: 400;
+	position: relative;
+}
+p {
+	margin: 5px 0;
+	font-size: var(--fs15);
+	color: #999;
+}
+table {
+	border-collapse: collapse;
+}
+table td {
+	border: 1px solid #d4d4d4;
+	padding: 7px;
+}
+table .thead td {
+	background-color: #d4d4d4;
+	color: #fff;
+}
+ol, ul {
+	margin: 10px 0 10px 1.2em;
+	padding: 0;
+}
+li {
+	font-size: var(--fs15);
+	color: #999;
+}
+.fixed_head {
+	background-color: #f6f6f6;
+	position: fixed;
+	max-width: calc(1404px - 10px);
+	width: 100%;
+	left: 50%;
+	z-index: 4;
+	transform: translateX(-50%);
+}
+.section_descript, .question_blk {
+	cursor: pointer;
+}
+.section_descript {
+	background-color: #fff;
+	padding: 7px 20px;
+	position: relative;
+	border-radius: 8px;
+}
+.detailed_faq {
+	padding-left: 30px;
+	background-color: #f6f6f6;
+	padding: 0;
+	width: calc(100% - 30px);
+	max-width: calc(1404px - 30px);
+	position: fixed;
+	border-radius: 8px;
+	left: 50%;
+	top: var(--theTOP);
+	transition: all 0.3s ease-in-out;
+	transform: translateX(calc(100vw + 20px));
+	z-index: 3;
+	padding-top: var(--fs15);
+	padding-bottom: 30px;
+}
+.detailed_faq.slide-in {
+	transform: translateX(-50%);
+	bottom: 0;
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.section_descript h3 {
+	margin: 10px 0;
+	position: relative;
+}
+.section_descript h3::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 0px;
+	top: 0px;
+	transition: all 0.3s ease-in-out;
+	background-size: cover;
+	background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='256' height='256' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdefs%3E%3C/defs%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)' %3E%3Cpath d='M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(11,119,185); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E");
+	transform: rotate(-90deg);
+}
+.detailed_faq .question_blk {
+	margin: 10px 0;
+	position: relative;
+}
+
+
+.detailed_faq .question_blk::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 0px;
+	top: 0px;
+	transition: all 0.3s ease-in-out;
+	background-size: cover;
+	background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='256' height='256' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdefs%3E%3C/defs%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)' %3E%3Cpath d='M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(11,119,185); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E");
+	transform: rotate(0deg);
+}
+.detailed_faq .question_blk.is-open::before {
+	transform: rotate(-180deg);
+}
+.back {
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	height: 0;
+	cursor: pointer;
+	padding-left: 20px;
+	position: relative;
+	display: block;
+}
+.back.is_shown {
+	opacity: 1;
+	height: 40px;
+}
+.back::before, .back::after {
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 1px;
+	background-color: #0b77b9;
+	left: -10px;
+	top: 14px;
+}
+.back::after {
+	transform: rotate(-45deg);
+	left: 0px;
+	top: 5px;
+}
+.back::before {
+	transform: rotate(45deg);
+	left: 0px;
+	top: 15px;
+}
+.detailed_faq a {
+	color: #0b77b9;
+}
+.answer_blk {
+	display: none;
+	padding-right: 4em;
+    font-size: var(--fs15);
+    color: #999;}
+.faq_contain {
+	background-color: #fff;
+	padding: 7px 20px;
+	border-radius: 8px;
+}
+.faq_contain:not(:last-child) {
+	margin-bottom: 10px;
+}
+body.in-search .section_descript {
+	display: none;
+}
+body.in-search .detailed_faq {
+	position: relative;
+	left: 0;
+	top: 0;
+	transform: translateX(0);
+	width: 100%;
+	padding: 0;
+}
+body.in-search .faq_section {
+	margin-bottom: 10px;
+}
+body .detailed_faq.no_trans {
+	transition: all 0s;
+}
+img {
+	max-width: 100%;
+	width: auto;
+}
+.hidden_cate {
+	display: none;
+}
+
+.highlight{ 
+    font-size: var(--fs15);
+    background-color: #cde3fb;
+    padding: 2px 0;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 992px) {
+.crtl {
+	width: 100%;
+	max-width: 160px;
+}
+.hidden-xs {
+	display: none;
+}
+.full_w {
+	padding: 0 20px;
+}
+.full_w.flexR {
+	flex-direction: column;
+	gap: 0;
+	padding-bottom: 30px;
+}
+.input_svg input {
+	position: relative !important;
+}
+.table-wrapper {
+	width: 100%;
+	border: 0;
+}
+.table-wrapper table {
+	border-collapse: separate;
+	border-spacing: 0 0.2em;
+}
+.table-wrapper table th, .table-wrapper table td {
+	padding: 0px;
+	border: 0;
+}
+.table-wrapper table td {
+	display: inline-block;
+	width: 50%;
+	padding: 5px 0;
+}
+.table-wrapper table td:first-child {
+	width: 100%;
+}
+h3 {
+	font-size: 16px;
+}
+}

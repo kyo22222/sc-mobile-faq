@@ -1,0 +1,2415 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>SCB Mobile FAQ</title>
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-regular.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-light.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-bold.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-thin.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<link rel="stylesheet" media="all" href="css/nextgen_mobile_faq_css.css" />
+<style>
+ p, li, .answer_blk{word-spacing: 4px;}
+</style>
+<script>
+  // JavaScript Document
+  $(document).ready(function () {
+    $(".faq_section .detailed_faq .question_blk h5").each(function() {
+      $(this).data("original", $(this).text());
+    })  
+
+		var value;
+		$("#search_txt").on("keyup", function() {
+			  value = '';
+			  $('.faq_section').each(function() {$(this).removeClass('hidden_cate')});
+			  value = $(this).val().toLowerCase();
+        $(".faq_section .detailed_faq .question_blk").filter(function() {//search question only
+          $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+
+      $('.detailed_faq').removeClass('slide-in');
+      if($(this).val() != '' && $(this).val() != null){
+        //$('.detailed_faq').show();
+        $('body').addClass('in-search');
+        $('.detailed_faq').addClass('no_trans');
+        $('.back').addClass('is_shown');
+      }else{
+        //$('.detailed_faq').hide();
+        $('body').removeClass('in-search');
+        setTimeout(function(){ $('.detailed_faq').removeClass('no_trans'); }, 200);
+        $('.back').removeClass('is_shown');
+      }
+
+		});
+
+    //highlightssss
+    $('.question_blk h5').each(function() {
+        var toLow = $(this).text().toLowerCase();
+        $(this).attr('data-original', toLow);
+    });
+    $("#search_txt").on('keyup', function() {
+			var regex = new RegExp(value, 'gi');
+			// Remove previous highlighting
+			$('.question_blk').find('.highlight').each(function() {
+			var content = $(this).html();
+			  $(this).replaceWith(content);
+			});
+
+			if (value !== '') {
+				// Highlight matching letters
+				$('.question_blk').find('[data-original*="' + value + '"]').each(function() {
+					var content = $(this).html();
+          var highlightedContent = content.replace(regex, function(match) {
+            if ($(this).is('a')) {
+              return match; // Exclude highlighting inside <a> tags
+            } else {
+              return '<span class="highlight">' + match + '</span>';
+            }
+          });
+          $(this).html(highlightedContent);
+				});
+			}
+		});
+
+
+
+    $(".section_descript").click(function(event) {
+      //$(this).toggleClass('is-open');
+      $(this).next('.detailed_faq').addClass('slide-in');
+      $('.back').addClass('is_shown');
+    });
+
+    $(".back").click(function(event) {
+      $(this).removeClass('is_shown');
+      $('.detailed_faq').removeClass('slide-in');
+
+      $('body').removeClass('in-search');
+      setTimeout(function(){ $('.detailed_faq').removeClass('no_trans'); }, 200);
+			
+			$('#search_txt').val('');
+			//reset
+			value = '';
+			$('.faq_section').each(function() {$(this).removeClass('hidden_cate')});
+			value = $(this).val().toLowerCase();
+			$(".faq_section .detailed_faq .question_blk").filter(function() {//search question only
+				$(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1);
+			});
+
+      // Remove previous highlighting
+      $('.question_blk').find('.highlight').each(function() {
+        var content = $(this).html();
+          $(this).replaceWith(content);
+        });
+    });
+
+    $(".detailed_faq .question_blk").click(function(event) {
+      $(this).next('.answer_blk').toggle();
+      $(this).toggleClass('is-open');
+    });
+  
+  });
+  
+  </script>
+</head>
+<body>
+
+<div class="result_area">
+ <div class="full_w fixed_head">
+  <div class="flexR">
+   <h1>FAQ</h1>
+   <div class="crtl">
+    <div class="input_svg">
+     <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16">
+      <path d="M6.34 10.903A4.567 4.567 0 0 1 1.778 6.34 4.568 4.568 0 0 1 6.34 1.777a4.569 4.569 0 0 1 4.564 4.564 4.567 4.567 0 0 1-4.564 4.562m8.73 2.721l-3.596-3.592a6.283 6.283 0 0 0 1.208-3.691A6.348 6.348 0 0 0 6.34 0 6.348 6.348 0 0 0 0 6.34a6.347 6.347 0 0 0 6.34 6.34c1.476 0 2.816-.526 3.895-1.374l3.577 3.575a.887.887 0 0 0 1.257 0 .89.89 0 0 0 0-1.257" fill="#868788"></path>
+     </svg>
+     <input id="search_txt" placeholder="Please search">
+    </div>
+   </div>
+  </div>
+  <a class="back" style="color: #0b77b9;">Back</a> </div>
+
+  <div class="full_w offsetT">
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Register for SC Mobile App</h3>
+    <p>New registrant? Understand the Basic Settings.</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to start using SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you have an ATM / Debit Card and PIN or Tele-electronic Identification Number (“TIN”), or a Credit Card, please follow the steps below to register. If you have forgotten your PIN or TIN or do not have an ATM / Debit Card, please
+    <a href="https://www.sc.com/hk/help/contact-us/">contact us</a> / visit any branch for assistance.<u><br>
+    <br>
+    Existing SC Online Banking customers: </u><br>
+    <br>
+    Enter your SC Online Banking username and password to log in to your SC Mobile App.
+    <br>
+    <br>
+    </p>
+    <p><u>New SC Mobile App users:</u><br>
+    <br>
+    Step 1: Open SC Mobile App.<br>
+    <br>
+    Step 2: Tap “LOGIN” &gt; “Register Here”. <br>
+    <br>
+    Step 3: Select one of the options below:<br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN” , select “Option 1”. <br>
+    <br>
+    If you have a Credit Card without any Tele-electronic Identification Number (“TIN”), select “Option 2”.<br>
+    <br>
+    Step 4: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account
+    <br>
+    <br>
+    If you have an ATM / Credit Card and TIN, please reset your username / password at SC Online Banking.<br>
+    <br>
+    <u>Register on Desktop or Laptop </u><br>
+    <br>
+    Step 1: Go to <a href="http://www.sc.com/hk/">www.sc.com/hk/</a>.<br>
+    <br>
+    Step 2: On the top menu, select “LOGIN” &gt; “Online Banking Login”<br>
+    <br>
+    Step 3: In the login box, select “Forgot username / password”.<br>
+    <br>
+    Step 4: Select one of the options below:<br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN” or an ATM / Credit Card and Tele-electronic Identification Number (“TIN”), select “Option 1”.<br>
+    <br>
+    If you have a Credit Card without any TIN, select “Option 2”.<br>
+    <br>
+    Step 5: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I do not have an ATM PIN / Phone Banking PIN. How can I register for SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you do not have any ATM PIN / Phone Banking PIN, you can follow the steps for
+    <u>Credit Card Customers to </u>register for SC Online Banking. <br>
+    <br>
+    In this case, you can enjoy credit card related banking services to view your credit card balance and transactions / view your e-statements / redeem rewards with your 360°&nbsp;Rewards Points / convert your Points to cash.
+    <br>
+    <br>
+    &nbsp;</p>
+    <p>To get full access to digital banking, please call our customer service hotline to arrange for collection of your ATM PIN / Phone Banking PIN by mail or at a branch.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I use SC Mobile App while staying overseas? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>SC Mobile App is easily accessible from anywhere you travel throughout the world, except in certain countries/areas that are subject to international economic sanctions.
+    <br>
+    <br>
+    We are committed to complying with those sanctions. As such, we do not allow our products and services to be used directly or indirectly in Cuba, Iran, North Korea, Syria, Crimea and Sevastopol.<br>
+    <br>
+    </p>
+    <p>Access to our products and services will continue to be blocked for as long as you are in Cuba, Iran, North Korea, Syria,&nbsp;Crimea and Sevastopol.
+    <br>
+    <br>
+    You can resume your use of these products and services when you are outside these countries/areas.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Is SC Mobile App compatible with my mobile phone?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>SC Mobile App is compatible with mobile devices including: </p>
+    <ul>
+    <li>iPhone, iPad, iPod Touch (iOS／iPadOS 14.0&nbsp; or above, excluding beta versions)</li><br>
+    <li>Android™ mobile phone (Android O.S. 9.0&nbsp; or above, excluding beta versions)</li><br>
+    <li>Touch ID / Face ID is only applicable to Apple iPhone, iPad and iPod Touch models which support Face ID / Touch ID
+    </li><br>
+    <li>Touch ID is only applicable to Android™ devices which support Android 9.0 or above
+    </li></ul>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If my mobile device has been jailbroken or rooted, can I use SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Sorry, as a jailbroken/rooted device is more susceptible to the risks of fraudulent transactions,to protect your interests, your SC Mobile App will be suspended when your mobile device is detected to have been compromised.
+    <br>
+    <br>
+    To ensure the safety of your account and personal information, please use a “clean” device to log in to SC Mobile App.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to change the language settings?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>New SC Mobile App users: Please select your preferred language on the login screen.
+    <br>
+    <br>
+    Existing SC Mobile users: Before logging in, please tap the question mark on the top right corner to change your preferred language.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I transfer my SC Mobile Key to a new device?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please log in to SC Mobile App with your new device, enter your SC Online Banking username and password, and then a pop-up will show, select “Re-register” and complete the below.
+    <br>
+    <br>
+    Steps to register for SC Mobile Key: <br>
+    <br>
+    Step 1: After logging into SC Mobile App, a reminder to register for SC Mobile Key will pop up.<br>
+    <br>
+    Step 2: Enter the OTP sent to you via email. <br>
+    <br>
+    Step 3: Enter the OTP sent to you via SMS. <br>
+    <br>
+    Step 4: Set up a new 6-digit PIN. <br>
+    <br>
+    Step 5: It’s done. Now you can use your 6-digit PIN to authenticate all your transactions with your new device.
+    <br>
+    <br>
+    After successfully being enabled on another device, your SC Mobile Key and 6-digit PIN will be disabled on the old device.</p>
+    <p>In case your old mobile device has been lost, please <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a> immediately for assistance with service suspension. <br>
+    <br>
+    Afterwards, please log into SC Mobile App with your SC Online Banking username and password to reset your SC Mobile Key.
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Login, Password and Security</h3>
+    <p>Forgot Username / Password or lost device</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have forgotten my SC Mobile App username / password. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you have an ATM / Debit Card and ATM PIN, or an ATM / Credit Card and Tele-electronic Identification Number (“TIN”), you may follow the following steps to reset.
+    <br>
+    <br>
+    If you have also forgotten your ATM PIN / TIN, you may <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a> or visit any branch and, after identity verification, we will issue the new ATM PIN / TIN to you.<br>
+    <br>
+    </p>
+    <p><u>Reset on SC Mobile App </u><br>
+    <br>
+    Step 1: Open SC Mobile App.<br>
+    <br>
+    Step 2: Tap “LOGIN” &gt; “Forgot Password?”. <br>
+    <br>
+    Step 3: Select one of the options below: <br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN, select “Option 1”. <br>
+    <br>
+    If you have a Credit Card without any Tele-electronic Identification Number (“TIN”), select “Option 2”.
+    <br>
+    <br>
+    Step 4: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account.<br>
+    <br>
+    If you have an ATM / Credit Card and TIN, please reset your username / password at SC Online Banking.<br>
+    </p>
+    <p><u>Reset on Desktop or Laptop </u><br>
+    <br>
+    Step 1: Go to <a href="http://www.sc.com/hk/">www.sc.com/hk/</a>. <br>
+    <br>
+    Step 2: On the top menu, click “LOGIN” &gt; Online Banking Login” <br>
+    <br>
+    Step 3: In the login box, click “Forgot username / password”. <br>
+    <br>
+    Step 4: Select one of the options below: <br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN, OR ATM / Credit Card and Tele-electronic Identification Number (“TIN”), select “Option 1”.
+    <br>
+    <br>
+    If you have a Credit Card without any TIN, select “Option 2”. <br>
+    <br>
+    Step 5: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account.
+    </p>
+    <p>&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to change my SC Mobile App password?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to your SC Mobile App, and select “Services” in the bottom menu.<br>
+    <br>
+    Step 2: In Settings, tap “Password and Security” &gt; “Change Password”.<br>
+    <br>
+    Step 3: Follow the instructions to enter your “Old Password”, “New Password” and “Enter New Password Again”, and then tap “Continue”.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I change my SC Mobile App username?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may follow the steps in “Forgot Password” to reset your username. <br>
+    <br>
+    <u>Reset on SC Mobile App</u> <br>
+    <br>
+    Step 1: Open SC Mobile App.<br>
+    <br>
+    Step 2: Tap “LOGIN” &gt; “Forgot Password?”. <br>
+    <br>
+    Step 3: Select one of the options below: <br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN, select “Option 1”. <br>
+    <br>
+    If you have a Credit Card without any Tele-electronic Identification Number (“TIN”), select “Option 2”.
+    <br>
+    <br>
+    Step 4: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account.<br>
+    <br>
+    If you have an ATM / Credit Card and TIN, please reset your username / password at SC Online Banking.</p>
+    <br>
+    <p><u>Reset on Desktop or Laptop </u><br>
+    <br>
+    Step 1: Go to <a href="http://www.sc.com/hk">www.sc.com/hk/</a>. <br>
+    <br>
+    Step 2: On the top menu, click “LOGIN” &gt; “Online Banking Login” <br>
+    <br>
+    Step 3: In the login box, click “Forgot username / password”. <br>
+    <br>
+    Step 4: Select one of the options below: <br>
+    <br>
+    If you have an ATM / Debit Card and ATM PIN, OR ATM Card / Credit Card and Tele-electronic Identification Number (“TIN”), select “Option 1”.
+    <br>
+    <br>
+    If you have a Credit Card without any TIN, select “Option 2”. <br>
+    <br>
+    Step 5: Accept the Terms &amp; Conditions and follow the instructions to reset your SC Online Banking account</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to enable Touch ID / Face ID login for SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Tap the face / finger icon on the login screen of SC Mobile App, and select “Enable Now”.
+    <br>
+    <br>
+    Step 2: Enable Touch ID / Face ID with your SC Online Banking username and password. Read carefully and accept the Terms and Conditions.<br>
+    <br>
+    Step 3: Enter the OTP sent to you via SMS.<br>
+    <br>
+    Step 4: Complete by enabling the function to start logging in with your Touch ID / Face ID.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to disable Touch ID / Face ID login for SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to your SC Mobile App, and select “Services” in the bottom menu.<br>
+    <br>
+    Step 2: In Settings, tap “Password and Security” &gt; “Manage Biometric Login”. <br>
+    <br>
+    Step 3: Slide the toggle next to “Enable Touch ID Authentication” or “Enable Face ID Authentication” to the left to disable the function.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Which mobile phones / devices support Touch ID / Face ID login?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Touch ID login is supported by Apple / Android mobile phones or devices with the below operating systems which support Touch ID:
+    <br>
+    <br>
+    </p>
+    <ul>
+    <li>Apple iOS 11 or above</li><br>
+    <li>Android 7.0 Nougat (API24) or above</li></ul>
+    <p>Face ID login is supported by Apple iPhone X or latter models with Apple iOS or above which support Face ID.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If a third party Face ID / Touch ID is stored on my mobile phone / device, can that person log in to my SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes. To maintain the safety of your accounts, please avoid sharing your device with others.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If I have changed my Touch ID / Face ID setup on my mobile phone / device, can I continue to log in to my SC Mobile App with my biometrics?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>No. You need to re-enable your Touch ID / Face ID.<br>
+    <br>
+    Step 1: Tap the face / finger icon on the login screen of SC Mobile App, and select “Enable Now”.
+    <br>
+    <br>
+    Step 2: Enable Touch ID / Face ID with your SC Online Banking username and password. Read carefully and accept the Terms and Conditions.<br>
+    <br>
+    Step 3: Enter the OTP sent to you via SMS.<br>
+    <br>
+    Step 4: Complete by enabling the function to start logging in with your Touch ID / Face ID.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If I cannot successfully log in to my SC Mobile App with my Touch ID / Face ID, can I log in again with my username / password.</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, you can choose to log in with either your Touch ID / Face ID, or your username / password.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have lost my mobile phone / device after activating SC Mobile Key. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please <a href="https://www.sc.com/hk/help/contact-us/">contact us</a> immediately for assistance with service suspension before you re-activate SC Mobile Key on another mobile phone.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I suspect that my SC Mobile App login credentials (including my username and/or password) have been compromised. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may call (852) 2886-8888 to select &quot;suspend digital banking account&quot; from the system menu to protect your account security.
+    <br>
+    <br>
+    Please note, once your account is suspended, your scheduled transfers and scheduled bill payments via digital banking will be terminated, with the exception of Standing Instructions.
+    <br>
+    <br>
+    When you think your account is safe or recovered, please call our hotline (852) 2886-8868 to unlocked it.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have lost my ATM Card. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can use your SC Mobile App to report the loss and get a replacement card.<br>
+    <br>
+    Step 1: Log in to your SC Mobile App. <br>
+    <br>
+    Step 2: Select “Services” at the bottom menu and tap “Deposits &amp; Debit Cards”.<br>
+    <br>
+    Step 3: Select the ATM Card and tap “Card Management” &gt; “Report Lost Card/Block Card”<br>
+    <br>
+    Step 4: Read the important notes carefully and confirm to proceed further.<br>
+    <br>
+    The replacement card will be issued and mailed to your registered address. <br>
+    <br>
+    If your card(s) is/are not listed for selection, please <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a> for further assistance.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have lost my Credit Card. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can use your SC Mobile App to report the loss and get a replacement card.<br>
+    <br>
+    Step 1: Log in to your SC Mobile App. <br>
+    <br>
+    Step 2: Select “Services” at the bottom menu and tap “Credit Cards” &gt; “Report Lost/Stolen Card”<br>
+    <br>
+    Step 3: Select the Credit Card.<br>
+    <br>
+    Step 4: Read the important notes carefully and confirm to proceed further.<br>
+    <br>
+    The replacement card will be issued and mailed to your registered address. <br>
+    <br>
+    If your card(s) is/are not listed for selection, please <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a> for further assistance.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I found some suspicious / fraudulent / unauthorized transactions under my Credit card(s) / account(s). What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can log in to your SC Mobile App to raise a transaction dispute.<br>
+    <br>
+    Step 1: Select “Services: at the bottom menu and tap “Credit Cards” &gt; “Credit Card Transaction Dispute”<br>
+    <br>
+    Step 2: Select the Credit Card.<br>
+    <br>
+    Step 3: Select “Transaction Dispute”.<br>
+    <br>
+    Step 5: Provide additional information and upload the documents.<br>
+    <br>
+    Step 6: Read the important notes carefully and confirm to proceed further.<br>
+    <br>
+    Step 7: You will be notified of any update by SMS or email.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I suspect that my Credit / ATM Card PIN has been compromised. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can log in to your SC Mobile App to deactivate your Credit / ATM Card. <br>
+    <br>
+    After deactivation, we will issue a replacement card to you.<br>
+    <br>
+    Step 1: Log in to your SC Mobile App.<br>
+    <br>
+    Step 2: Select “Services” at the bottom menu and tap “Credit Cards” / “ATM Cards” &gt; “Report Lost/Stolen Card”<br>
+    <br>
+    Step 3: Select the Credit / ATM Card.<br>
+    <br>
+    Step 5: Read the important notes carefully and confirm to proceed further.</p>
+    <br>
+    <p>The replacement card will be issued and mailed to your registered address. <br>
+    <br>
+    If your card(s) is/are not listed for selection, please <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a> for further assistance.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>SC Mobile Key</h3>
+    <p>Set Up the 6-digit PIN and Offline PIN</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is SC Mobile Key?&nbsp; </h5>
+    </div>
+    <div class="answer_blk">
+    <p>SC Mobile Key is an enhanced feature for SC Mobile App that enables you to authenticate your digital banking login and transactions.
+    <br>
+    <br>
+    With the SC Mobile Key bound and enabled on your mobile phone / device, you can get things done easily without any SMS OTP and / or transaction token.&nbsp;&nbsp;&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the benefits of SC Mobile Key?&nbsp; </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Seamless: No longer will you need to key in an OTP to authenticate your banking transactions or log in to access Online Securities. Let SC Mobile Key gets it done for you.&nbsp;
+    <br>
+    <br>
+    Secure: When performing high-risk transactions such as adding a new payee, SC Mobile Key will digitally authenticate them for you, protecting such transactions with an additional layer of security.&nbsp;
+    <br>
+    <br>
+    Anywhere: Worried that your SC Mobile Key will not work when you are overseas? The truth is: your SC Mobile Key can work for you even when there is no data connectivity. In an offline mode, you can generate your Offline PIN and authenticate high-risk transactions
+     by using a challenge response code.&nbsp; </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I activate SC Mobile Key?&nbsp; </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Download the latest SC Mobile App. Login with your SC Online Banking username and password or Face ID / Touch ID, and you will be prompted to bind and activate SC Mobile Key.&nbsp;&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why do I need to create a 6-digit SC Mobile Key PIN?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Your 6-digit SC Mobile Key PIN provides an additional layer of security when you authenticate high-risk transactions (add payee, limit maintenance, update personal information, and etc.) or when you want to generate an Offline PIN. You are the only person
+     with knowledge of this 6-digit PIN and who can use it to authenticate such transactions.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Do I have to reset my SC Mobile Key when I change my mobile phone / device?&nbsp; </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, your SC Mobile Key can be bound to only one mobile phone / device. If you want to transfer your SC Mobile Key to a new mobile phone / device, please re-activate it.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I forgot my 6-digit SC Mobile Key PIN. What should I do?&nbsp; </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can reset it with your SC Mobile App:&nbsp; <br>
+    <br>
+    Step 1: After logging in to SC Mobile App, select “Services” in the bottom menu.&nbsp;
+    <br>
+    <br>
+    Step 2: In Settings, tap “Change SC Mobile Key” &gt; “Change PIN”&nbsp; <br>
+    <br>
+    Step 3: Enter the OTP sent to you via email.&nbsp; <br>
+    <br>
+    Step 4: Enter the OTP sent to you via SMS.&nbsp; <br>
+    <br>
+    Step 5: Create your 6-digit PIN&nbsp; <br>
+    <br>
+    Step 6: Your PIN is successfully reset. Now you can authenticate all transactions with your new 6-digit PIN.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I change my 6-digit SC Mobile Key?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can reset it with your SC Mobile App:&nbsp; <br>
+    <br>
+    Step 1: After logging in to SC Mobile App, select “Services” in the bottom menu.&nbsp;
+    <br>
+    <br>
+    Step 2: In Settings, tap “Change SC Mobile Key” &gt; “Change PIN”&nbsp; <br>
+    <br>
+    Step 3: Enter the OTP sent to you via email.&nbsp; <br>
+    <br>
+    Step 4: Enter the OTP sent to you via SMS.&nbsp; <br>
+    <br>
+    Step 5: Create your 6-digit PIN&nbsp; <br>
+    <br>
+    Step 6: Your PIN is successfully reset. Now you can authenticate all transactions with your new 6-digit PIN.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I activate SC Mobile Key on more than one mobile phone / device?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>No, for security reasons, you can only activate your SC Mobile Key on one mobile phone / device. If you want to activate your SC Mobile Key on another mobile phone / device, the old one on the original mobile phone / device will be disabled.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I am using Online Banking / another device to login but I cannot receive push notification to authenticate my login. How can I get offline PIN?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>&nbsp; </p>
+    <p>Step 1: In SC Mobile App login page, tap “Generate Offline PIN” &gt; “Offline PIN for login”&nbsp;
+    <br>
+    <br>
+    Step 2: Based on instruction, input 6-digit SC Mobile Key PIN, there will be a set of 6-digit offline PIN generated.&nbsp;
+    <br>
+    <br>
+    Step 3: Input the 6-digital offline PIN in Online Banking / another device to authenticate your login.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I am using Online Banking / another device to perform a transaction, but I cannot receive push notification to authenticate my transaction. How can I get offline PIN?&nbsp;
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>&nbsp; </p>
+    <p>Step 1: In SC Mobile App login page, tap “Generate Offline PIN” &gt; “Offline PIN for transaction”&nbsp;
+    <br>
+    <br>
+    Step 2: Based on instruction, input 6-digit SC Mobile Key PIN&nbsp; <br>
+    <br>
+    Step 3: Input the 8-digit code displayed in Online Banking / another device into your binded device. There will be a set of 6-digit offline PIN generated.&nbsp;
+    <br>
+    <br>
+    Step 4: Input the 6-digital offline PIN in Online Banking / another device to authenticate your login.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Self-service Digital Services</h3>
+    <p>Personal Information Update and e-Ticketing Service</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I update my personal information such as email address, correspondence address and mobile number on SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, but please register for SC Mobile Key in advance and log in to SC Mobile App to submit your request at “Update Profile Details”.&nbsp;
+    <br>
+    <br>
+    Remark:&nbsp;SC Mobile App does not support overseas / local mobile number updates. If you need to do so, please register for SC Mobile Key and log in to SC Online Banking to make the change.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How long does it take for personal information updates to become effective on the bank’s system and records?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>It may take up to 4 working days to complete the request. Once the changes have been made, we will notify you by different channels such as SMS, email and physical mail).
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Communication Preferences</h3>
+    <p>How to Enable Push Notification and Change Preferences</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the function of Push Notification?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>As an enhancement to your SC Mobile App, you can receive push notifications for banking services (such as service messages, transaction alerts, offers and product information).
+    <br>
+    <br>
+    Included as well is a Notification Centre that will centrally store all your push notifications from Standard Chartered.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I enable Push Notification to receive the latest banking information?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can enable Push Notification by either of the two following methods: </p>
+    <ol>
+    <li>After logging in to SC Mobile App, in the bottom menu, select “Services” &gt; “”Communication Preference” &gt; “Push Notification” &gt; ensure the button to the right of “Push notification inbox” is switched to the right to activate the function.
+    </li><br>
+    <li>In SC Mobile App, tap the bell icon on the top right &gt; at the button, press the “Turn on” button to activate Push Notification.
+    </li></ol>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I disable Push Notification?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>After logging in to SC Mobile App, in the bottom menu, select “Services” &gt; ”Communication Preferences” &gt; “Push Notification” &gt; ensure the button to the right of “Push notification inbox” is switched to the right to disable the function.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What if I have disabled Push Notification for the SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You will continue to receive information from us via SMS and email. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What if any push notifications fail to be delivered to my mobile phone / device?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You will receive that information via SMS and email. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What kind of banking alerts will be sent via push notifications?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may receive push notifications for service messages, transaction alerts, offers and product information, such as Bill Payment, Cash Withdrawal, Fund Transfer, Retail Purchase and Cheque Return for your banking accounts, as well as credit card payment
+     due date reminder. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I enable Push Notification on more than one mobile phone?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>For security reasons, we only allow customers to enable Push Notification on one mobile phone.
+    <br>
+    <br>
+    If you want to enable this function on another mobile phone, your Push Notification on the original mobile phone will be automatically disabled.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What if I have lost my mobile phone?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please <a href="https://www.sc.com/hk/help/contact-us/">contact us</a> immediately for assistance with service suspension before you re-enable Push Notification on another mobile phone.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I bought a second-hand mobile phone. Why can’t I enable Push Notification on it?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>That mobile phone most likely still has the previous customer’s SC Mobile App installed and Push Notification enabled.
+    <br>
+    <br>
+    You need to uninstall the existing SC Mobile App and download it again before you can enable Push Notification.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Where can I check push notifications in SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>After logging in to SC Mobile App, tap the ring bell on the top right &gt; “Notification” to check push notifications.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why are iPhone users suggested to open the SC Mobile App every 30 days to view push notifications?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>iPhone users who have enabled the function are suggested to open their SC Mobile App every 30 days to check push notifications, which cannot be received when the app is not running in the background.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I am an Android user. Why am I not able to receive push notifications when in China?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Google Play is prohibited in mainland China. Therefore Android mobile phones / devices are unable to receive push notifications in mainland China.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I choose the channels to receive communications relating to offers and product information?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>After logging in to SC Mobile App, in the bottom menu, select “Services” &gt; ”Communication Preferences” &gt; “Marketing Offers &amp; Product Updates” to choose among various channels to receive communications relating to offers and product information.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Will I receive push notifications every time I spend with my credit card(s)? Can I stop receiving such notifications?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>When you carry out Card-Not-Present transactions (i.e. transactions that are completed without physical presentation of the relevant credit card, including but not limited to online transactions, mail / telephone orders), we will send you push notifications,
+     which cannot be disabled. Such alerts are meant to avoid the risk of any unauthorized use of your credit card(s) and to help you easily keep track of your daily banking.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I stop receiving marketing promotions?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, you can. After logging in to SC Mobile App, in the bottom menu, select “Services&gt; ”Communication Preferences” &gt; “Marketing Offers &amp; Product Updates” to change the settings.
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Pay &amp; Transfer</h3>
+    <p>Fund Transfers, Bill Payments, Add Payees, Digital Wallets</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Where can I set my Daily Transfer Limits? Why are my Daily Transfer Limits preset / reset at HKD0?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>To update your Daily Transfer Limits, please log in to SC Mobile App, select “Pay &amp; Transfer” &gt; “Manage” &gt; “Daily Limit Maintenance”.<br>
+    <br>
+    For online security and protection of your bank accounts, the daily online transfer limits for newly registered SC Online Banking and SC Mobile App customers are preset at HKD0 (but previously set transfer limits will remain unchanged after any software upgrade).
+    <br>
+    <br>
+    Besides, if you have not made any transfer for a particular transfer type (such as Third Party Local Transfers) via SC Online Banking of SC Mobile App for a period of time, the transfer limit for such transfer type will be reset to HKD0.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Do I have to pay any charges for making a transfer with a credit card? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>From now till 30 December 2023 (both dates inclusive), the 3.5% over-limit electronic fund transfer handling fee will be waived for an accumulated transferred amount of up to HKD80,000 made by a Cardholder in a calendar month (based on the transaction date)
+     when using SC Mobile App or SC Online Banking&nbsp; to make any local transfer, bill payment, digital wallet top up transaction from such Cardholder’s Standard Chartered / MANHATTAN Credit Card(s).
+    <br>
+    <br>
+    3.5% handling fee will apply to any transferred amount exceeding HKD80,000 and will be debited from the valid credit card account with the highest transferred amount. If the last day of a calendar month is a Sunday, any related transactions made on that day
+     will be counted in the following calendar month. The credit card account should be valid and with sufficient available credit limit during the transfer. 3.5% handling fee will apply to a transferred amount of above HKD25,000 and charges will be debited from
+     the valid credit card account with the highest transferred amount if the total accumulated transferred amount exceeds HKD25,000 by a Cardholder in a calendar month (based on the transaction date) when using electronic banking services, person to person (P2P)
+     payment services or mobile device / app / electronic funds transfer platforms, effective from time-to-time, to make any transfer / top up transaction from such Cardholder’s Standard Chartered / MANHATTAN Credit Card(s) to a specified account (including but
+     not limited to Octopus Wallet account). <br>
+    <br>
+    If the last day of a calendar month is a Sunday, any related transactions made on that day will be counted in the following calendar month.
+    <br>
+    <br>
+    Any related transactions made on the first day of a calendar month and before or during the relevant system update, will be counted in the preceding calendar month.
+    <br>
+    <br>
+    When a Cardholder is making an electronic fund transfer transaction and the accumulated transferred amount exceeds the cap, a message will be prompted at SC Online Banking / SC Mobile App (as the case may be) to indicate the transfer amount applicable for the
+     handling fee waiver and the handling fee which may be incurred. <br>
+    <br>
+    By confirming to proceed with the transfer, the Cardholder will be deemed to have agreed to pay the handling fee (where applicable), as shown by SC Online Banking / SC Mobile App, and prescribed by the Bank from time to time under the terms and conditions stated
+     herein and by other promotions.&nbsp;&nbsp; <br>
+    <br>
+    Please refer to the latest <a href="https://www.sc.com/hk/zh/credit-cards/terms-and-conditions/overlimit-transfer-handling-fee/">
+    Terms and Conditions for the Over-limit Electronic Fund Transfer Handling Fee Promotion Offer</a>.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the differences between Local Transfer and SC Pay (FPS)?</h5>
+    </div>
+    <div class="answer_blk">To make a Local Transfer, you need to enter the bank account number and the payee must be registered beforehand via SC Mobile App or SC Online Banking. It is subject to the daily transfer limit for third party accounts, which is HKD1,000,000.
+    <br>
+    <br>
+    Mobile number, email address or FPS ID is used for SC Pay and payee registration is not required.&nbsp;It is subject to the daily transfer limit for non-registered payees, which is HKD300,000.
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the types of fund transfer available for Local Transfer?</h5>
+    </div>
+    <div class="answer_blk">For “Local Transfer”, funds can be transferred, only in HKD or RMB, to a registered third party bank account held with Standard Chartered or other local banks.
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>My credit card account(s) cannot be found on the list for choosing the debit account. Why?</h5>
+    </div>
+    <div class="answer_blk">If your payee has been registered by signed request (denoted by * in payee list), currently you may only select a deposits account to transfer from.
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why was my fund transfer rejected due to “payee name not matched”?</h5>
+    </div>
+    <div class="answer_blk">When processing the transfer instruction, the receiving institution may verify, among other things, the payee’s name and account number against its records.
+    <br>
+    <br>
+    To avoid rejection, please check with the payee for the full account name maintained with the receiving institution.
+    <br>
+    <br>
+    If necessary, please update by adding the payee again via SC Mobile App or SC Online Banking.
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why was my payee deleted? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>A payee will be deleted if there is no record of successful transfer from any of your bank accounts with us, during the 12 months after such payee is added via SC Mobile App / SC Online Banking.
+    <br>
+    <br>
+    You may add the payee again if you want. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>To add a local account / bill payee via SC Mobile App, is it the same as the way with SC Online Banking?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>It’s the same. The payee list is also the same for SC Mobile App and SC Online Banking.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to add a local account / bill payee in SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can go to SC Mobile App, select “Pay &amp; Transfer” &gt; “My Payees”, scroll to the bottom &gt; “Add Payee” to add a payee.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Who can register for SC Pay (FPS)?</h5>
+    </div>
+    <div class="answer_blk">To register for SC Pay (FPS), you need to:
+    <ul>
+    <li>Be an SC Online Banking customer and a registered user for SC Mobile App;</li><br>
+    <li>Have a valid mobile number or email address registered with the Bank; and</li><br>
+    <li>Hold an eligible HKD or CNY sole or “either-to-sign” joint account (Current, Savings or Integrated Deposits Account).</li></ul>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have an Integrated Deposits Account which supports both HKD and RMB. When I enter the transfer amount for SC Pay (FPS), why is it displayed only in HKD / RMB?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please make sure that you have bound the Integrated Deposits Account to SC Pay as the registered account and have activated both the HKD and RMB accounts.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I make a fund transfer in RMB from my HKD account, or to a HKD account of my payee?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Currently, accounts registered with SC Pay are only allowed to make fund transfers in the same currency.
+    <br>
+    <br>
+    If the payee’s FPS default account is not an integrated account that supports both HKD and RMB, a fund transfer in RMB to his or her HKD account could be rejected.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the FPS default receiving bank? Will my payee know which bank is my FPS default receiving bank?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Unless your FPS payer has named a particular bank as the receiving bank, the funds transferred to you via FPS will be credited to your default receiving bank, and the name of the receiving bank will not be disclosed to the payer.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I use SC Mobile App to check my FPS registration with another bank? How do I change the FPS default receiving bank to Standard Chartered?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can go to “Management” &gt; “SC Pay (FPS) Registration and Settings” to check the name of the other bank which you have registered for FPS with your mobile number or email address and delete the record.
+    <br>
+    <br>
+    If you have not assigned Standard Chartered as your FPS default receiving bank, on the same screen, you may tap the option icon next to your mobile phone or email address, and select “SCB as default receiving bank”.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I use my credit card as the registered account for SC Pay to receive FPS payments?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You must use a Standard Chartered savings / current account as the registered account for SC Pay.
+    <br>
+    <br>
+    A credit card account can be used as the debit but not credit account for HKD payments.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>When I select “Pay Bills &amp; Credit Cards” &gt; “SC Credit Card”, can I pay the Standard Chartered Credit Card of my family member or friend?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>When you select “Pay Bills &amp; Credit Cards” &gt; “SC Credit Card”, you can only pay your own Standard Chartered Credit Card(s) by debiting your bank account.
+    <br>
+    <br>
+    If you want to pay your family member or friend’s credit card, please go to “Pay Bills” and “Add Bill Payee” with the relevant credit card number before making payment.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I found an FPS QR code for payment on the bill. Do I have to register first before using Scan &amp; Pay?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Before using Scan &amp; Pay, please log in to SC Mobile App to register for SC Pay with your mobile number and email address registered with us.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Does Scan &amp; Pay work with the QR codes for other payment platforms? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Scan &amp; Pay only works with FPS QR codes. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Which digital wallets are available for topping up?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can easily top up your AlipayHK Account and Octopus Wallet via SC Mobile App.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I schedule fund transfer instructions with “Top Up Digital Wallet” </h5>
+    </div>
+    <div class="answer_blk">
+    <p>“Top Up Digital Wallet” only supports instant fund transfers. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I entered a top-up amount within the daily transfer limit. Why was my fund transfer rejected?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Apart from the daily transfer limit, please also check if your AlipayHK Account or Octopus Wallet has reached the stored value limit.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I use SC Mobile App to deposit new funds from a third party bank / Source Institution to my Standard Chartered account?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Add Money via Pay &amp; Transfer on SC Mobile App, and you can fund in from a third party bank / Source Institution. All within one app.<br>
+    <br>
+    Simply select your SCB account as the credit account and the Source Institution, input your Source Account number and your 6-digit SC Mobile Key PIN to complete your registration.
+    <br>
+    <br>
+    Once your registration is successful, you can easily initiate a fund transfer (i.e. Add Money Transaction).
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Which banks / Source Institutions support Standard Chartered’s Add Money Service?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can Add Money from the following Source Institutions: <br>
+    <br>
+    004 – The Hongkong and Shanghai Banking Corporation Limited <br>
+    <br>
+    009 – China Construction Bank (Asia) Corporation Limited<br>
+    <br>
+    012 – Bank of China (Hong Kong) Limited<br>
+    <br>
+    018 – China CITIC Bank International Limited<br>
+    <br>
+    024 – Hang Seng Bank Ltd.<br>
+    <br>
+    040 – Dah Sing Bank Limited<br>
+    <br>
+    387 – ZA Bank Limited<br>
+    <br>
+    388 – Livi Bank Limited<br>
+    <br>
+    389 – Mox Bank Limited<br>
+    <br>
+    391 – Fusion Bank Limited</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If I Add Money from my account with another bank to my Standard Chartered account, what is the maximum amount per transaction or per day? How can I change the Daily Add Money Limit?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The maximum Daily Add Money Limit is HKD100,000. To change the limit, you will have to cancel your existing Add Money service and register again with a new limit.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I check my Add Money history? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can check the transaction records of your receiving account to see if the funds are ready.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the difference between “Transfer History” and “Scheduled Transfer”? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>“Transfer History” shows the transfers and payments which have been executed, while “Scheduled Transfer” is a pending instruction.
+    <br>
+    <br>
+    You may place an instruction to pay a payee / merchant on a pre-defined date. <br>
+    <br>
+    This service is applicable to Personal Account Transfer, Local Transfer, International / Cross Border Transfer, Bill &amp; Credit Card Payment.
+    <br>
+    <br>
+    Simply select a payment date and we will automatically make the transfer for you on that date.<br>
+    <br>
+    You must ensure that sufficient funds / credit limit (if you pay with a credit card) are/is available in your account one day before the transfer date.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I check or amend a standing instruction with “Scheduled Transfer”? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>“Scheduled Transfer” only shows pending instructions for Local Transfer, International / Cross Border Transfer, Bill Payment and Standard Chartered Credit Card Payment.
+    <br>
+    <br>
+    Please log in to SC Online Banking to check or amend your standing instructions.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I amend a scheduled transfer, change the payment date, amount, or repeat the instruction, etc.?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please log in to SC Online Banking to amend your scheduled transfer or payment instruction.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What kind of beneficiary information do I need to provide in order to make an “International / Cross Border Transfer”?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You need to Add Payee with the following information: </p>
+    <ul>
+    <li>Clearing Code (available from online banking / bank statement) </li><br>
+    <ul>
+    <li>Australia – 6-digit BSB Code</li><li>Canada – 8-digit Transit Number</li><li>UK - 6-digit Sort Code</li><li>US - 9-digit ABA Routing Number</li><li>Other Destinations - 11-digit SWIFT Code</li></ul>
+    <br>
+    <li>Payee’s account number (for remittances to the UK and European countries, please provide the payee’s IBAN (consisting of up to 34 characters and available from online banking / bank statement)
+    </li><br>
+    <li>Payee’s name (which must be the same as the one in beneficiary bank’s records)
+    </li><br>
+    <li>Payee’s address (including province, city &amp; postal code details) </li></ul>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Do I have to pay service charges / handling fees for making an “International / Cross Border Transfer”?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please refer to “<a href="https://av.sc.com/hk/content/docs/hk-service-charges-en.pdf">Service Charges</a>”
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>When will my payee receive the payment? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>The exact time needed for payee to receive the funds depends on several factors, such as the remittance currency type, the processing time of payment intermediaries and the operating hours and clearing mechanisms of local and payee banks.
+    <br>
+    <br>
+    The displayed delivery time on screen is for your reference only. <br>
+    <br>
+    Please reserve enough time, provide accurate and complete payee information, as well as ensure sufficient funds in the account, so that payee can receive the funds on time.
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>QR Cash </h3>
+    <p>Set Up an Instruction, Where Can I Use QR Cash?</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have successfully set up a QR Cash instruction, can I withdraw cash from any Standard Chartered or JETCO ATM?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>QR Cash is available at all Standard Chartered ATMs and JETCO ATMs with a “JETCO cardless withdrawal” sticker.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I withdrawal cash from an ATM at any time after successfully setting up a QR Cash instruction?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>A QR Cash instruction is valid for 60 minutes. After expiry, you need to create a new instruction.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the daily withdrawal limit for QR Cash? How do I change the limit? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>The daily cardless withdrawal limit is HKD10,000 or its equivalent, which must be within the daily ATM withdrawal limit assigned to each customer or the available credit limit in the case of withdrawal with a credit card account, subject to the relevant
+     terms and conditions. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I withdraw RMB from an HKD account? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Currently, we only support same account currency. However, you can tap “Between My Accounts” to convert your HKD funds into RMB and tap “QR Cash” to select your RMB account for cash withdrawal. Please note that you can withdraw RMB via QR Cash only from
+     Standard Chartered ATMs. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I use QR Cash overseas? </h5>
+    </div>
+    <div class="answer_blk">No. QR Cash is currently only available in Hong Kong. </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Credit Cards</h3>
+    <p>View Card Number &amp; CVV, Mobile Payments, 360° Rewards Redemption</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I activate a newly received credit card on SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can activate a new credit card within 3 months after receiving the physical card.
+    <br>
+    <br>
+    Step 1:&nbsp; Log in to your SC Mobile App and select “Services” in the bottom menu. <br>
+    <br>
+    Step 2:&nbsp; Select “Credit Card” ＞ “Credit Card Activation”.<br>
+    <br>
+    Step 3:&nbsp; Select the card for activation. <br>
+    <br>
+    Step 4:&nbsp; Input your HKID number and date of birth. <br>
+    <br>
+    Step 5:&nbsp; Confirm the activation. <br>
+    <br>
+    Step 6:&nbsp; The new PIN will be mailed to you within 2 working days after card activation.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I use SC Mobile App to view my credit card details, such as card number, expiry date and CVV?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you applied for your credit card online and have registered for full digital banking services, you can check your CVV and expiry date at SC Online Banking or SC Mobile App.
+    <br>
+    <br>
+    Step 1: Select one of your credit cards listed on the account summary page, <br>
+    <br>
+    Step 2: Tap “Details”. <br>
+    <br>
+    Step 3: Tap “Card Details” to check the card’s expiry date and CVV. <br>
+    <br>
+    Step 4: Authorize this action by using the SC Mobile Key on your SC Mobile App. <br>
+    <br>
+    Step 5: Once successfully authorized, you can use the CVV and expiry date to add your credit card to your mobile wallets or make online payments.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I view my credit card transaction records? For how long will my credit card transactions be displayed in SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: On the home screen, select the credit card you need to view. <br>
+    <br>
+    Step 2: Tap “Transactions” to view your credit card transactions for the past 90 days.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I found billed and unbilled transactions on my credit card transaction records. What do they mean?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>“Current Balance” includes the amount of billed and unbilled transactions. It excludes pending transactions.
+    <br>
+    <br>
+    “Billed transactions&amp;rdquo are transactions that have been billed in the current statement.
+    <br>
+    <br>
+    “Unbilled transactions&amp;rdquo are transactions to be billed in the next statement.
+    <br>
+    <br>
+    “Pending transactions&amp;rdquo are authorised transactions that may be posted to your account and may affect your available credit limit amount
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I set up a “Credit Card Payment Due Date” alert? How and when will I receive the alert after successfully setting it up?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can log in to SC Online Banking to set up a “Credit Card Payment Due Date” alert.
+    <br>
+    <br>
+    Step 1: Select “SMS Alert Service”. <br>
+    <br>
+    Step 2: Select “Alerts Settings”.<br>
+    <br>
+    Step 3: Under “Current Status of Alert Services”, confirm to start setting up an alert.<br>
+    <br>
+    Step 4: Under “Select Alert Category”, select “Credit Card Related Alerts” to proceed.<br>
+    <br>
+    Step 5: Select the card for alert setting, check “Email” and/or “SMS” as the channels to receive alerts and click “Apply above settings” to confirm.
+    <br>
+    <br>
+    To change the scheduled time and date for receiving the payment due date reminder, you may select “Customize Alert Conditions” in Step 5, input the time and date for the alert and click “Apply above settings” to confirm.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I subscribe to and view credit card eStatements?</h5>
+    </div>
+    <div class="answer_blk">Step 1: Log in to your SC Mobile App, and go to “Services”.<br>
+    <br>
+    Step 2: Go to “Settings” &gt; “Communication Preferences” “eStatement / eAdvice Preferences” &gt; “Manage – Subscription Types”.<br>
+    <br>
+    Step 3: Select your eStatement / eAdvice Settings. </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I request a waiver for credit card annual fee / overlimit charges / late charges / finance charges for purchases?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>If your credit card(s) has(have) been charged with annual fees, overlimit charges, late charges or finance charges for purchases within the last month, you may submit a waiver request via SC Online Banking / SC Mobile App.
+    <br>
+    <br>
+    Step 1: Click “Help &amp; Services” for SC Online Banking / tap “Services” &gt; “Service Request” for SC Mobile App.
+    <br>
+    <br>
+    Step 2: Click “Credit Card” &gt; “Credit Card Service Charge Waiver”. <br>
+    <br>
+    Step 3: Select the fee type. <br>
+    <br>
+    Step 4: Select the card(s) for the waiver request. <br>
+    <br>
+    Step 5: Select the fee(s) for the waiver request. <br>
+    <br>
+    Step 6: Confirm the details for your waiver request. <br>
+    <br>
+    The waiver request result will be delivered to you via SMS and email notifications in 3 working days.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I add my credit card to Apple Pay / Google Pay on my mobile phone / device?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please click <a href="https://www.sc.com/hk/bank-with-us/apple-pay/">here</a> for information on Apple Pay.<br>
+    <br>
+    Please click <a href="https://www.sc.com/hk/bank-with-us/google-pay/">here</a> for information on Google Pay.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I temporarily block my credit card(s)? What will happen after blocking?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>As an additional security measure, you now have the option to place temporary blocks on your credit cards and resume using them when desired.
+    </p>
+    <br>
+    <p>All credit card functions, including online / offline transactions, mobile wallets, and ATM cash withdrawals, will be suspended until you initiate an unblock. Pre-authorized transactions, including Octopus AAVS or direct-debit authorization (“DDA”) set up
+     with merchants will not be impacted by the temporary block. <br>
+    <br>
+    Step 1: Go to “Services” &gt; “Credit Cards” &gt; “Temporary Block/Unblock Credit Card”
+    <br>
+    <br>
+    Step 2: Select the card(s) to block. <br>
+    <br>
+    Step 3: Cards with a dimmed toggle are currently in an “active” status. You may slide the toggle to block the card(s).
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I unblock my credit card(s)? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Go to “Services” &gt; “Credit Cards” &gt; “Temporary Block/Unblock Credit Card”
+    <br>
+    <br>
+    Step 2: Select the card(s) to unblock. <br>
+    <br>
+    Cards with a red toggle are currently in a “blocked” status. You may slide the toggle to unblock the card(s).</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I reset my credit card ATM PIN? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can instantly reset your credit card PIN via SC Mobile App, without having to call our customer service hotline or wait for mail delivery of your new PIN.
+    <br>
+    <br>
+    Step 1: Select “Credit Card PIN Reset”. <br>
+    <br>
+    Step 2: Select the card for PIN resetting. <br>
+    <br>
+    Step 3: Set your new credit card PIN. <br>
+    <br>
+    Step 4: Authorize this action by using the SC Mobile Key on your SC Mobile App. <br>
+    <br>
+    Step 5: Your credit card PIN has been reset. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I initiate a dispute request when I have doubts about my credit card transaction(s)?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please report these transactions to us immediately. <br>
+    <br>
+    To protect your interests, the relevant card will be immediately deactivated and a replacement card (with a new card number) will be issued to you.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I redeem reward with the Rewards Points on my credit card via SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Discover”＞ “360° Rewards Redemption Platform” to redeem rewards with the Rewards Points on your card.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I apply for a higher credit limit via SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Go to “Services” for SC Online Banking, tap “Services” &gt; “Credit Cards” &gt; “Increase Credit Limit”.
+    <br>
+    <br>
+    Step 2: Select the card(s) concerned. <br>
+    <br>
+    Step 3: Input the new credit limit. <br>
+    <br>
+    Step 4: Select the reason for limit increase application. <br>
+    <br>
+    Step 5: Read the Terms &amp; Conditions and confirm your application. <br>
+    <br>
+    Step 6: Your application will be processed within 7 working days. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I transfer out my credit balance if I have made an excess payment with my credit card or received a merchant refund?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can transfer it to your other Standard Chartered credit card or banking account online.
+    <br>
+    <br>
+    Step 1: Go to “Services” for SC Online Banking, tap “Services” &gt; “Credit Cards” &gt; “Credit Balance Refund”.
+    <br>
+    <br>
+    Step 2: Select the card(s) concerned. <br>
+    <br>
+    Step 3: Select a refund method to refund to your Standard Chartered account or other credit card.
+    <br>
+    <br>
+    Step 4: Select the receiving Standard Chartered account or credit card (with a positive account balance).
+    <br>
+    <br>
+    Step 6: Input the transfer amount and confirm to proceed. <br>
+    <br>
+    Step 7: Confirm the details of the request. <br>
+    <br>
+    Your credit balance transfer will be processed in 3 working days. </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Bank Accounts &amp; Debit Cards</h3>
+    <p>Account Balance, Time / Savings Deposits</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Where can I find my account number? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Home” &gt; “Deposits” &gt; Select the account &gt; “Details” to check your account number.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to subscribe to and view eStatements? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to your SC Mobile App, and go to “Services”.<br>
+    <br>
+    Step 2: Go to “Communication Preferences” “eStatement / eAdvice Preferences” &gt; “Manage – Subscription Types”.<br>
+    <br>
+    Step 3: Select your eStatement / eAdvice Settings.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I place a cheque book request via SC Mobile App? </h5>
+
+    </div>
+    <div class="answer_blk">
+    <p>After logging in to SC Mobile App, in the bottom menu, select “Services” &gt; “Deposits &amp; Debit Cards” &gt; “Cheque Book Request” to place a request.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I set up a Time Deposit via SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Discover” &gt; “Deposits” to find various types of Time Deposits and open the relevant account.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I view Time Deposit rates? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Discover” &gt; “Deposits” to find various Time Deposit rates. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I change the renewal instruction for my Time Deposit? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>To change or enquire about your renewal instruction, please <a href="https://www.sc.com/hk/help/contact-us/">
+    contact us</a>. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Apart from the HKD, can I set up Time Deposits in other currencies via SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, you can tap “Discover” &gt; “Deposits” to find various types of Time Deposits and open the relevant account.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I open the Marathon Savings Account via SC Mobile App? </h5>
+    </div>
+    <div class="answer_blk">You can tap “Discover” &gt; “Deposits” &gt; “Marathon Savings Account” to find out more and open the account.
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Mortgages</h3>
+    <p>Mortgages Plan</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to I find out what mortgage plans are available?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Discover” &gt; “Mortgages” to find various types of mortgage plans.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Loans</h3>
+    <p>Loans product</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I find out what loan plans are available?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can tap “Discover” &gt; “Loans” to find various types of loan plans.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Invest &amp; Insure</h3>
+    <p>Investment Products &amp; Services, myWealth Service, MPF &amp; Insurance Services</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why is the Investment balance on SC Mobile different from the one on Online Banking?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The Investment balance on SC Mobile is refreshed to the day before (T-1), while the one on iBanking is refreshed to two days before (T-2).&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why after selecting an Investment Portfolio, only the investment section is updated according to the selected portfolio, while the other sections (including deposits) are not refreshed?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Selecting an Investment Portfolio only applies and refreshes the Investment products section, whereas other banking products section lists out all products that you own.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What does the Investment balance on Home tab include?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>This amount includes the investment products of all your Investment Portfolios (single named or joint named), except MPF or Insurance policies.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the differences between the Investment section on Home tab against the Invest tab?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The Investment section on Home tab lists all your Investment Portfolios, corresponding holdings and balances.
+    <br>
+    <br>
+    Via Invest tab, you can also go to different product pages to conduct transactions, view personalized investment ideas tailored for you, create/renew the &quot;Customer Investment Profile&quot; questionnaire, and view the Bank's latest market insights.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I create / renew my Customer Investment Profile on SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can create / renew your Customer Investment Profile via Wealth Profile section on Invest tab.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I open Equities / Unit Trusts account on SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you do not have an Equities / Unit Trusts account, you can follow the instructions to open one by clicking Equities or Unit Trusts on Invest tab and invest in Equities / Unit Trusts.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the fees &amp; charges for Investment fund/ Securities services?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please click the link for all the applicable <a href="https://av.sc.com/hk/content/docs/hk-service-charges-en.pdf">
+    fees and charges</a>.<br>
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>For the investments balance on Home tab, why can I only view the unrealized profit or loss of investment funds and Fixed Income / bond for reference?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The unrealized profit or loss of your equities holding is shown on SC Equities with reference to the free real-time price quoted.
+    <br>
+    <br>
+    For displaying the product information related to other investment products, we are working on improving client experience and getting this fixed as soon as we can.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I invest in Unit Trusts via SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can click Unit Trusts on Invest tab to access the Unit Trusts trading platform. With reference to different thematic fund lists or searching your fund choices by keyword or using different fund attributes under Advanced Search to locate available funds.
+     Then you can review the funds and invest directly.&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I obtain detailed information about my fund holdings, such as dividend record?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may click the fund name under your fund holdings to go into Fund Details page, Check out the “Last Dividend Paid” records for the past 1 year under “Dividends” section.
+    <br>
+    <br>
+    Also, you can check the historical transactions of your account over the past 12 months to locate the actual cash dividends paid by the fund.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I view the fund documents (such as factsheet and annual report) on SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may access the fund documents via the Fund Information tab under each investment fund.&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I exchange foreign currency on SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may go to “FX” under Invest tab to use the foreign exchange services. Standard Chartered Wealth Management provides you a one-stop foreign exchange platform, with all the handy functions and extensive data that enable you to capture FX opportunities
+     anytime anywhere.&nbsp; &nbsp; </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the service hours for exchanging foreign currency?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The Foreign Exchange services are available from Monday to Sunday except system maintenance hours on Monday from 3 am to 6 am.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Are there any handling fees/processing charges when I exchange foreign currencies?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>There are no handling fees/ processing charges when you exchange foreign currencies.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I view past foreign currencies exchange record?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may go to “FX” under Invest tab and select Orders icon then press History where you will be able to view your recent transactions.
+    <br>
+    <br>
+    You can also use the search bar at the top for easier browsing.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why is the Fixed Income / Bond balance on the new SC Mobile different from the one previously?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>In order to enhance user experience, the Fixed Income / Bond balance on the new SC Mobile now includes accrued interest for your easy reference.
+    <br>
+    <br>
+    Accrued Interest is calculated by multiplying the par value of the bond by the coupon rate, times the actual number of days between the last coupon payment day and the current day, divided by 360 or 365 (Subject to relevant bond currency).&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I view my InvestPower usage and balances on SC Mobile?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You can view via InvestPower on Invest tab.&nbsp;&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why are investment holdings categories displayed in English even I have selected Chinese as the display language? Is this a system error?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>We are working on improving client experience and getting this fixed as soon as we can.<br>
+    <br>
+    Please refer to the product holdings under each category for detailed information.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is myWealth?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>myWealth service generates investment ideas with rationale backed by the Bank’s house views, based on your current portfolio holdings and risk profile, in a tailor-made approach systematically.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How does myWealth work?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>myWealth elevates your investment advisory experience in a systematic approach:&nbsp;</p>
+    <ol>
+    <ol>
+    <li>Analyse portions of your investment holdings with the Bank&nbsp;</li><br>
+    <li>Categorise your holdings based on underlying asset classes&nbsp;</li><br>
+    <li>Compare your current asset allocation to the Bank’s model portfolio based on your risk profile&nbsp;</li><br>
+    <li>Rate your personalised ideas into multiple categories based on the Bank’s house view on the asset class&nbsp;</li></ol>
+    </ol>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the meaning of “?/5” on this myWealth banner (“Is your portfolio diversified enough?”) at Invest tab?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The banner is an entry point to myWealth service which provides tailored investment ideas and analyses your portfolio strength.
+    <br>
+    <br>
+    Portfolio strength is a score given on your current portfolio with assessments on diverse aspects, including your cash holdings, portfolio risk level, level of diversification and alignment with our Chief Investment Office (CIO) house views.
+    <br>
+    <br>
+    You may refer to myWealth for the detailed analysis of your Portfolio Strength score.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is the meaning of “Strength” and “View ☆” on Invest tab?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>This is one of the entry points to myWealth service which provides you with personalised investment ideas and analyses your portfolio strength. Portfolio strength is a score given on your current portfolio with assessments on diverse aspects, including your
+     cash holdings, portfolio risk level, level of diversification and alignment with our Chief Investment Office (CIO) house views.
+    <br>
+    <br>
+    You may view the detailed analysis of your portfolio strength score via myWealth.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why is the loading screen shrinking and enlarging intermittently when I enter myWealth?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>We are working on improving client experience and getting this fixed as soon as we can.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I want to consolidate my Manulife MPF account balance to the Standard Chartered Bank account total balance. That is, I want to see my MPF account balance at any time after logging in to the SC Mobile app. How can I do so?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Once you have login to SC Mobile, click on MPF under Invest tab or Discover tab, and the opt-in application flow will be displayed. You are required to click “Accept” button for the 1st Client Declaration to SCB and 2nd Client Declaration to Manulife to
+     complete the application. It will be taking around 3 – 4 weeks to complete the opt-in process.&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to apply for General Insurance?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>You may apply directly via SC mobile app under Insure tile on Invest tab or Discover tab.&nbsp;</p>
+    <p>&nbsp; </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to inquire about general insurance products?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>[Allianz General Insurance]&nbsp;<br>
+    <br>
+    For any Allianz general insurance products enquiries, please contact Allianz Customer Service at (852) 8100 2402.&nbsp; Our office hours are from 9:00am to 6:00 pm, Monday to Friday (except public holidays).&nbsp;</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I check my existing General Insurance policies?&nbsp;&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>[Allianz General Insurance]&nbsp;<br>
+    <br>
+    On your SC mobile app, select Insure tile on Invest tab or Discover tab and then “My Allianz Policies” or alternatively, contact Allianz Customer Service at (852) 8100 2402. Our office hours are from 9:00am to 6:00 pm, Monday to Friday (except public holidays).&nbsp;<br>
+    <br>
+    &nbsp;&nbsp; </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I make a claim for General Insurance?&nbsp;</h5>
+    </div>
+    <div class="answer_blk">
+    <p>[Allianz General Insurance]&nbsp;<br>
+    <br>
+    On your SC mobile app, select Insure tile on Invest tab or Discover tab, then “My Allianz Policies” and the select “Register Claim”&nbsp;or alternatively, contact Allianz Customer Service at (852) 8100 2402. Our office hours are from 9:00am to 6:00 pm, Monday to
+     Friday (except public holidays).&nbsp;</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Product Discovery</h3>
+    <p>Latest Offers, How to Apply</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is “Discover”? How can it help? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>By tapping “Discover”, you can browse updates about our products, services and latest offers.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>If I find any products / services / offers suitable for me, how do I apply for them?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Under the relevant product updates, tap “Apply now” to apply for each of the relevant products / services / offers.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I check the deposit rates?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>By tapping “Discover”, you can check the deposit rate under specific product or
+    <a href="https://www.sc.com/hk/deposits/board-rates/">click</a> here for board rates.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>eStatements / eAdvices</h3>
+    <p>Paper Statement Fee &amp; Wavier</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are eStatements / eAdvices?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>eStatements / eAdvices are electronic statements / advices made available on SC Mobile App / SC Online Banking. eStatements / eAdvices contain the same information as your paper statements / advices.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Is there a charge for the eStatement / eAdvice Service? </h5>
+    </div>
+    <div class="answer_blk">
+    <p>No, the eStatement / eAdvice Service is offered to you free of charge.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I subscribe to the eStatement / eAdvice Service or request changes to my choices of service?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to your SC Mobile App, and go to “Services”.<br>
+    <br>
+    Step 2: Go to “Settings” &gt; “Communication Preferences” “eStatement / eAdvice Preferences” &gt; “Manage – Subscription Types”.<br>
+    <br>
+    Step 3: Select your eStatement / eAdvice Settings.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How many months of eStatements / eAdvices can I view on SC Mobile App / SC Online Banking?</h5>
+    </div>
+    <div class="answer_blk">
+    <p><u>eStatements</u><br>
+    <br>
+    Starting from 1 January 2020, if you have successfully subscribed to the eStatement Service on or before January 2019, you can view your eStatements from January 2019 to the latest available on SC Mobile App / SC Online Banking and the eStatements will be accumulated
+     up to 7 years (i.e. 2026 for those who subscribed in 2019).<br>
+    <br>
+    Starting from 1 January 2020, if you have successfully subscribed to the eStatement service after January 2019, you can view your eStatement from the month of subscription to the latest available on SC Mobile App / SC Online Banking and the eStatements will
+     be accumulated up to 7 years (i.e. 2026 for those who subscribed in 2019).<br>
+    <br>
+    <u>eAdvices</u><br>
+    <br>
+    You can view eAdvices in the past 3 months via SC Mobile App / SC Online Banking.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Mobile Account Opening</h3>
+    <p>Eligibility &amp; Required Documents</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Am I eligible to apply for an Integrated Deposits Account via SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>To be eligible to apply for an Integrated Deposits Account via SC Mobile App, you must meet
+    <u>ALL</u> the following criteria: <br>
+    <br>
+    1. Not holding any of the following deposit accounts with Standard Chartered Bank (Hong Kong) Limited:
+    </p>
+    <ul>
+    <li>Savings Account </li><br>
+    <li>Current / Cheque Account </li><br>
+    <li>Integrated Deposits Account </li><br>
+    <li>Time Deposit Account </li><br>
+    <li><a href="https://www.sc.com/hk/zh/investment/online-investment-account-opening/mutual-funds/">Investment</a> Account</li><br>
+    </ul>
+    <p>2. Holding a valid HKID; <br>
+    <br>
+    3. Being a Hong Kong Permanent or Non-Permanent Resident aged 18 or above; <br>
+    <br>
+    4. Being a Non-US resident, non-US citizen and not holding a US Permanent Resident Card (Green Card);
+    <br>
+    <br>
+    5. Open this account for personal use. <br>
+    <br>
+    The actual time required for processing may vary from case to case. </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I am holding a Standard Chartered Credit Card. Can I apply for an Integrated Deposits Account via SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, as long as you do not hold any deposit account with us and meet the other requirements listed above at the time of account opening via SC Mobile App.
+    <br>
+    <br>
+    Your personal profile under your existing Standard Chartered Credit Card will be updated according to the mobile application form after your bank account is successfully opened.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I used to have a Standard Chartered account / credit card. Can I use this Mobile Account Opening service?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, as long as you are a new bank client and meet the other requirements listed above, you can open an account with us via SC Mobile App.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have a Standard Chartered account. Can I apply for an Integrated Deposits Account via SC Mobile App?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you are already holding an Integrated Deposits Account with us, you can log in to SC Online Banking and select “Open An Account” in the navigation menu on the left to apply for another Integrated Deposits Account with us.&nbsp;
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why do I have to shoot both front and back shots of my HKID card? Why do I fail to take good shots every time?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>We need both the front and back shots of your HKID to complete identity verification for you without a branch visit.
+    <br>
+    <br>
+    During photo shooting, please ensure adequate and steady lighting. <br>
+    <br>
+    Make sure there is no shadow or glare cast over your HKID, and the image is clearly visible and not out of focus.&nbsp;
+    <br>
+    <br>
+    Some of the factors which may result in unsuccessful identity verification, say, bright light, scratches and wear &amp; tear on the card surface may affect the accuracy of the system in carrying out identity verification by making comparisons with your selfies
+     and HKID. <br>
+    <br>
+    The above factors may make it impossible for the system to detect a valid HKID in order to complete the identity verification. In this case, please visit any of our branches for account opening.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have received this message: “We need more information to complete your application. Please take along your identification document to any of our branches to complete the account opening procedure within 30 days”. What should I do?</h5>
+    </div>
+    <div class="answer_blk">
+    <h4>We may need you to provide some supporting documents or answer some follow-up questions.
+    <br>
+    <br>
+    Please take along your identification document to any of our <a href="https://www.sc.com/hk/atm-branch-locator/">
+    branches</a> to complete the account opening procedure within 30 days. <br>
+    <br>
+    To save your time queuing, you may go to our website to make an appointment for account opening at a designated branch.</h4>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What do I need to do after the account is successfully opened?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Once your Integrated Deposits Account is successfully opened, a Standard Chartered UnionPay Single Currency ATM Card will be issued to you. When you have received it, please log in to SC Online Banking to acknowledge receipt.
+    <br>
+    <br>
+    Also, please log in to SC Mobile App to set up your account and select your preferred banking plan and offer within 30 days after your account is opened.
+    <br>
+    <br>
+    Please note that you can set up your account via SC Mobile App from 8am to 10pm, Monday to Sunday.
+    <br>
+    <br>
+    If you fail to complete the account setup, the prevailing savings interest rates will continue to apply to your Integrated Deposits Account opened via SC Mobile App, and your banking plan will remain to be Easy Banking.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why can’t I withdraw cash or transfer funds immediately from my newly opened account?</h5>
+    </div>
+    <div class="answer_blk">Please note that cash withdrawals and fund transfers will be activated after account validation within 2 working days after the account opening date.　
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>Contact &amp; Support</h3>
+    <p>myRM, Chat with Live Agent, Instant Chat with Our Virtual Assistant Stacy</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is myRM?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>myRM is an electronic banking software that enables you to easily connect with your dedicated Relationship Manager.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Who can use myRM?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>myRM is an official chat platform for Standard Chartered Hong Kong Priority Banking clients to communicate with their dedicated Relationship Manager.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What are the service hours of myRM?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>The service hours are the same as branch opening hours. On the other hand, you are highly encouraged to schedule in advance to chat with your dedicated Relationship Manager at a time and date you desire.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What services can be made available with myRM?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>myRM enables you to connect with us through text or voice chat wherever you are in a secure post-login environment. It allows your dedicated Relationship Manager to share product documents and files with you and make an appointment for portfolio review.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How to I access the myRM platform?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to SC Mobile.<br>
+    <br>
+    Step 2: Go to “Contact &amp; Support” (tap the <img src="images/talkblub.png" style="vertical-align:middle; margin:0 5px"> icon on the top right of the home screen).
+    <br>
+    <br>
+    Step 3: Select myRM.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>What is Chat with Live Agent?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Chat with Live Agent enables you to connect to our Live Agents through text chat in an authenticated environment.
+    <br>
+    <br>
+    During your interactions with Stacy, you will be offered an option “Chat with Live Agent” when you may need further assistance.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How can I connect to a Live Agent?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>While you are chatting with Stacy, you will be offered the option to “Chat with Live Agent”.
+    <br>
+    <br>
+    If you select that option, you will be directed to another chat window and connected to a Live Agent during the service hours.
+    <br>
+    <br>
+    If no Live Agent is available at that moment, you may choose to leave an offline message and a Live Agent will get back to you through text chat.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I have left an offline message to a Live Agent, how will I know when the Live Agent has replied?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>If you have enabled Push Notification on SC Mobile App, you will be notified once the Live Agent has responded to you.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Can I retrieve my previous text chats with a Live Agent?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Yes, you can retrieve your chat history by tapping “…” &amp; “Chat History” at the top right corner of the chat window with Stacy.
+    </p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Who is Stacy?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Stacy, our virtual assistant, is available 24/7 answers your general banking and credit card enquiries.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>How do I get help from Stacy?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Step 1: Log in to SC Mobile App.<br>
+    <br>
+    Step 2: Go to “Contact &amp; Support” (tap the <img src="images/talkblub.png" style="vertical-align:middle; margin:0 5px"> icon on the top right of the home screen).
+    <br>
+    <br>
+    Step 3: Tap “Chat”.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="faq_section">
+    <div class="section_descript">
+    <h3>General Enquiries</h3>
+    <p>Fees and Charges</p>
+    </div>
+    <div class="detailed_faq">
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Where can I check the latest Standard Rates and Fees?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>Please click <a href="https://av.sc.com/hk/content/docs/hk-service-charges-en.pdf">
+    here</a> for Standard Fees and Charges.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>Why am I no longer able to use screen capture/recording/mirroring while using SC Mobile app?</h5>
+    </div>
+    <div class="answer_blk">
+    <p>To protect our clients against the latest malware-enabled scams, which involve fraudulent apps hijacking screen capturing tools on mobile devices to obtain sensitive data, the Bank has implemented new security controls in SC Mobile app restricting the use
+     of the following:</p>
+    <ul>
+
+    <li>Android: screen mirroring, screen sharing, screen recording and screen capture</li><br>
+    <li>iOS: screen mirroring, screen sharing and screen recording</li></ul>
+    <p>Please ensure these functions are turned off before using SC Mobile App.</p>
+    </div>
+    </div>
+    <div class="faq_contain">
+    <div class="question_blk">
+    <h5>I used to make screen capture(s) after submitting a payment instruction or at “Transactions” tab. How could I prove my payment to payee/merchant after the screen capture feature has been disabled in the new SC Mobile App?
+    </h5>
+    </div>
+    <div class="answer_blk">
+    <p>After submitting a payment instruction in SC Pay (FPS), Scan &amp; Pay, Local or International &amp; Cross-Border Transfer, we will notify you the payment status via email, Push Notification or SMS. You may present to your payee/merchant as proof of payment.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  
+</div>
+
+
+</body>
+</html>

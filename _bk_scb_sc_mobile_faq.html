@@ -1,0 +1,1823 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Demo for SCB NextGen FAQ</title>
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-regular.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-light.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-bold.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<link href='//av.sc.com/assets/global/fonts/sc-sans-web-thin.woff2' rel='preload' as='font' crossorigin='anonymous' />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<style>
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin-italic.svg#sc-sans-web-ultra-thin-italic") format("svg");font-weight:100;font-style:italic;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light-italic.svg#sc-sans-web-light-italic") format("svg");font-weight:300;font-style:italic;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin.svg#sc-sans-web-thin") format("svg");font-weight:200;font-style:normal;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-regular.svg#sc-sans-web-regular") format("svg");font-weight:400;font-style:normal;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-ultra-thin.svg#sc-sans-web-ultra-thin") format("svg");font-weight:100;font-style:normal;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-thin-italic.svg#sc-sans-web-thin-italic") format("svg");font-weight:200;font-style:italic;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold.svg#sc-sans-web-bold") format("svg");font-weight:700;font-style:normal;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-italic.svg#sc-sans-web-italic") format("svg");font-weight:400;font-style:italic;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-light.svg#sc-sans-web-light") format("svg");font-weight:300;font-style:normal;font-stretch:normal;font-display:swap}
+    @font-face{font-family:'SC Sans Web';src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.eot");src:url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.eot?#iefix") format("embedded-opentype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.woff2") format("woff2"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.woff") format("woff"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.ttf") format("truetype"),url("https://av.sc.com/assets/global/fonts/sc-sans-web-bold-italic.svg#sc-sans-web-bold-italic") format("svg");font-weight:700;font-style:italic;font-stretch:normal;font-display:swap}
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: "SC Sans Web","SC Sans",Arial,sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+        font-size: var(--fs15);
+        font-weight: 300;
+
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+    a {
+        text-decoration: none;
+    }
+    .img-responsive {
+        width: auto;
+        max-width: 100%;
+    }
+    .img-center {
+        display: block;
+        margin: auto;
+    }
+    select:focus, input:focus {
+      outline: none;
+    }
+    /***************/
+    
+    /* width */
+    ::-webkit-scrollbar {
+        width: 100%;
+        height: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #dcdcdc;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .hidden-xs{display: block;}
+    .hidden{display: none !important;}
+    .disable{opacity: 0.2; pointer-events: none;}
+    input, select{transition: all 0.5s ease-out; opacity: 1; color: #000; background-color: #fff; border-radius: 0;}
+    .input_svg{transition: all 0.5s ease-in-out;}
+    
+    header{width: 100%; height: 90px;}
+    .full_w{max-width: 1404px; margin: auto; padding: 0 var(--fs15);}
+    .flexR{display: flex; flex-direction: row; gap: 2em; justify-content: space-between; align-items: center;}
+    
+    input, select{transition: all 0.5s ease-out; opacity: 1; color: #000; background-color: #fff; border-radius: 0;}
+    .input_svg{transition: all 0.5s ease-in-out; position: relative;
+        display: block;
+        width: 100%;}
+    input{color: #868788; width: 100%;
+        border: 0;
+        padding: 7px 0 10px;
+        font-size: var(--fs15);
+        margin-top: 5px;
+        background-color: transparent;
+    
+        border-bottom: 1px solid #868788;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;}
+    svg {
+        z-index: 2;
+        transform: translate(50%,50%);
+        position: absolute;
+        top: 6px;
+        right: 8px;
+    }
+    
+    header .full_w{margin: auto; display: flex; flex-direction: column; height: 100%; justify-content: center;}
+    .sc-nav__logo {
+        width: 130px;
+        height: 51px;
+    }
+    .sc-nav__logo-link {
+        display: block;
+        background-size: 130px 51px;
+        background-image: url(https://av.sc.com/assets/global/images/components/header/standard-chartered-logo.svg);
+        background-position: left;
+        background-repeat: no-repeat;
+        opacity: 1;
+        background-color: #fff;
+        position: relative;
+        z-index: 9;
+        width: 130px;
+        height: 51px;
+    }
+    
+    footer{
+        background-color: #2b2929;
+        color: #b7b7b7;
+        clear: both;
+        font-size: 12px !important;
+        font-weight: 300;
+        letter-spacing: .5px;
+        line-height: 15px;
+        padding: 30px 0;
+    }
+    footer span{font-size: 12px !important;}
+    footer a{color: #fff !important; text-decoration: none; text-transform: uppercase; font-size: 10px;}
+
+    .result_area {
+        background-color: #f6f6f6;
+        width: 100%;
+        padding: 0 0 30px;
+        overflow-x: hidden;
+    }
+    .faq_section{
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .faq_section h1{margin: 15px auto; font-size: 26px;}
+
+    :root{
+        --fs15 : 15px;
+        --theTOP : 115px;   
+    }
+
+    .crtl{width: 100%; max-width: 320px;}
+    .offsetT{margin-top: var(--theTOP) !important; padding-top: var(--fs15);}
+
+    h1{font-size: 32px; font-weight: 700;}
+    h3{font-size: 16px; margin: 10px 0; font-weight: 700; padding-right: 3em;}
+    h5{margin: 10px 0; padding-right: 3em; font-weight: 400; position: relative; }
+    p{margin: 5px 0; font-size: var(--fs15); color: #999;}
+
+    table{border-collapse: collapse;}
+    table td{border:1px solid #d4d4d4; padding: 7px;}
+    table .thead td{ background-color: #d4d4d4; color: #fff;}
+
+    ol, ul{margin: 10px 0 10px 1.2em; padding: 0;}
+    li{font-size: var(--fs15); color: #999;}
+
+    .fixed_head{
+        background-color: #f6f6f6;
+        position: fixed;
+        max-width: calc(1404px - 10px);
+        width: 100%;
+        left: 50%;
+        z-index: 4;
+        transform: translateX(-50%);
+    }
+
+    .section_descript, .question_blk{cursor: pointer;}
+
+    .section_descript{
+        background-color: #fff;
+        padding: 7px 20px;
+        position: relative;
+        border-radius: 8px;
+    }
+    .detailed_faq{
+        padding-left: 30px;
+        background-color: #f6f6f6;
+        padding: 0;
+        width: calc(100% - 30px);
+        max-width: calc(1404px - 30px);
+        position: fixed;
+        border-radius: 8px;
+        left: 50%;
+        top: var(--theTOP);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(calc(100vw + 20px));
+        z-index: 3;
+        padding-top: var(--fs15);
+        padding-bottom: 30px;
+    }
+    .detailed_faq.slide-in{
+        transform: translateX(-50%);
+        bottom: 0;
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .section_descript h3{margin: 10px 0; position: relative;}
+    .section_descript h3::before{content: ''; position: absolute; width: 20px; height: 20px; right: 0px; top: 0px; transition: all 0.3s ease-in-out;background-size: cover; background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='256' height='256' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdefs%3E%3C/defs%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)' %3E%3Cpath d='M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(11,119,185); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E"); transform: rotate(-90deg);}
+
+    .detailed_faq .question_blk{margin: 10px 0; position: relative;}
+    .detailed_faq .question_blk::before{content: ''; position: absolute; width: 20px; height: 20px; right: 0px; top: 0px; transition: all 0.3s ease-in-out;background-size: cover; background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='256' height='256' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cdefs%3E%3C/defs%3E%3Cg style='stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;' transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)' %3E%3Cpath d='M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z' style='stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(11,119,185); fill-rule: nonzero; opacity: 1;' transform=' matrix(1 0 0 1 0 0) ' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E"); transform: rotate(0deg);}
+    .detailed_faq .question_blk.is-open::before{transform: rotate(-180deg);}
+
+    .back{transition: all 0.3s ease-in-out; opacity: 0; height: 0; cursor: pointer; padding-left: 20px; position: relative; display: block;}
+    .back.is_shown{opacity: 1; height: 30px;}
+    .back::before, .back::after{content: ''; position: absolute; width: 14px; height: 1px; background-color: #0b77b9; left: -10px; top: 14px;}
+    .back::after{transform: rotate(-45deg); left: 0px; top: 5px;}
+	.back::before{transform: rotate(45deg); left: 0px; top: 15px;}
+	
+	.detailed_faq a{color: #0b77b9;}
+
+    .answer_blk{display: none; padding-right: 4em;}
+    .faq_contain{background-color: #fff; padding: 7px 20px; border-radius: 8px;}    
+    .faq_contain:not(:last-child){margin-bottom: 10px;}
+
+    body.in-search .section_descript{display: none;}
+    body.in-search .detailed_faq{position: relative; left: 0; top: 0; transform: translateX(0); width: 100%; padding: 0;}
+    body.in-search .faq_section{margin-bottom: 10px;}
+    body .detailed_faq.no_trans{transition: all 0s;}
+    img{max-width: 100%; width: auto;}
+    .hidden_cate{display: none;}
+
+    @media screen and (max-width: 992px) {
+
+        .crtl{width: 100%; max-width: 160px;}
+
+        .hidden-xs{display: none;}
+        .full_w{padding: 0 20px;}
+        .full_w.flexR{flex-direction: column; gap: 0; padding-bottom: 30px;}
+
+        .input_svg input {position: relative !important;}
+    
+        .table-wrapper{width: 100%; border: 0;}
+        .table-wrapper table {border-collapse: separate; border-spacing: 0 0.2em; }
+        .table-wrapper table th, .table-wrapper table td{padding: 0px; border: 0;}
+        .table-wrapper table td{display: inline-block;width: 50%; padding: 5px 0;}
+        .table-wrapper table td:first-child{width: 100%;}
+
+        h3 {font-size: 16px;}
+
+    }
+    </style>
+
+<script>
+    // JavaScript Document
+    $(document).ready(function () {
+		var value;
+		$("#search_txt").on("keyup", function() {
+                //console.log($(this).val());
+			    value = '';
+			    $('.faq_section').each(function() {$(this).removeClass('hidden_cate')});
+			    value = $(this).val().toLowerCase();
+				$(".faq_section .detailed_faq .question_blk").filter(function() {//search question only
+					$(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1);
+				});
+
+				// $('.faq_section').each(function() {
+				// 	var allChildrenHidden = true;
+				// 	$(this).children('.detailed_faq').each(function() {
+				// 		if ($(this).css('display') !== 'none') {
+				// 		allChildrenHidden = false;
+				// 		return false; // Exit the inner loop if any child is not hidden
+				// 		}
+				// 	});
+				// 	if (allChildrenHidden) {
+				// 		$(this).addClass('hidden_cate');
+				// 	}
+				// });
+
+                $('.detailed_faq').removeClass('slide-in');
+                 
+                if($(this).val() != '' && $(this).val() != null){
+                    //$('.detailed_faq').show();
+                    $('body').addClass('in-search');
+                    $('.detailed_faq').addClass('no_trans');
+                    $('.back').addClass('is_shown');
+                }else{
+                    //$('.detailed_faq').hide();
+                    $('body').removeClass('in-search');
+                    setTimeout(function(){ $('.detailed_faq').removeClass('no_trans'); }, 200);
+                    $('.back').removeClass('is_shown');
+                }
+		});
+
+        $(".section_descript").click(function(event) {
+            //$(this).toggleClass('is-open');
+            $(this).next('.detailed_faq').addClass('slide-in');
+            $('.back').addClass('is_shown');
+        });
+        $(".back").click(function(event) {
+            $(this).removeClass('is_shown');
+            $('.detailed_faq').removeClass('slide-in');
+
+            $('body').removeClass('in-search');
+            setTimeout(function(){ $('.detailed_faq').removeClass('no_trans'); }, 200);
+
+        });
+
+        $(".detailed_faq .question_blk").click(function(event) {
+            $(this).next('.answer_blk').toggle();
+            $(this).toggleClass('is-open');
+        });
+    
+    });
+    
+    </script>
+
+</head>
+<body>
+<!--header>
+    <div class="full_w">
+        <div class="sc-nav__logo">
+            <a href="#" class="sc-nav__logo-link" title="Standard Chartered">
+                &nbsp;
+            </a>
+        </div>
+    </div>
+</header-->
+
+<div class="result_area">
+    <div class="full_w fixed_head">
+        <div class="flexR">
+            <h1>常見問題</h1>
+            <div class="crtl">
+            
+                <div class="input_svg">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16">
+                    <path d="M6.34 10.903A4.567 4.567 0 0 1 1.778 6.34 4.568 4.568 0 0 1 6.34 1.777a4.569 4.569 0 0 1 4.564 4.564 4.567 4.567 0 0 1-4.564 4.562m8.73 2.721l-3.596-3.592a6.283 6.283 0 0 0 1.208-3.691A6.348 6.348 0 0 0 6.34 0 6.348 6.348 0 0 0 0 6.34a6.347 6.347 0 0 0 6.34 6.34c1.476 0 2.816-.526 3.895-1.374l3.577 3.575a.887.887 0 0 0 1.257 0 .89.89 0 0 0 0-1.257" fill="#868788"></path>
+                    </svg>
+                    <input id="search_txt" placeholder="請按此輸入字眼搜尋">
+                </div>
+            </div>
+        </div>
+        <a class="back" style="color: #0b77b9;">返回</a>
+    </div>
+
+    <div class="full_w offsetT">
+        <div class="faq_section">
+            <div class="section_descript">
+                <h3>由現行SC Mobile App （版本6.31.5或以下） 升級至新版 SC Mobile App  （版本7.2.0或以上）</h3>
+                <p>SC Mobile App 升級時會遇到的問題</p>
+            </div>
+
+            <div class="detailed_faq">
+
+                <div class="faq_contain">
+                    <div class="question_blk"><h5>升級版SC Mobile 應用程式有甚麽新功能?</h5></div>
+                    <div class="answer_blk">
+                    <p>我們聽到了客戶的聲音。升級版SC Mobile 應用程式 將會比以往更個人化及流暢，全面提升客戶的數碼銀行體驗，並為客戶帶來包括但不限於以下的新體驗:</p>
+                    <ul>
+                    <li>煥然一新的用戶界面</li>
+                    <li>管理轉賬及繳付賬單，並增加收款人</li>
+                    <li>探索最新、熱門、個人化的產品與服務</li>
+                    <li>一站式自助服務與通訊，讓您無需在不同界面找尋所需服務。 </li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>怎樣得知我正在使用的是現行SC Mobile 應用程式或升級版 SC Mobile 應用程式？</h5></div>
+                    <div class="answer_blk">
+                    <p>若版本編號為6.31.5 或以下，即代表您正在使用現行的SC Mobile 應用程式。若版本編號為7.2.0 或以上，即代表您正在使用升級版SC Mobile 應用程式。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>如何查看SC Mobile 應用程式版本編號？</h5></div>
+                    <div class="answer_blk">
+                    <p>方法1：您可以前往流動裝置的應用程式商店，搜尋“SC Mobile Hong Kong”，選擇SC Mobile Hong Kong 以查看更多内容，並在“應用程式資料“中找到版本編號。</p>
+                    <p>方法2：打開現行SC Mobile 應用程式，點選畫面左上角的菜單符號，點擊「關於我們」，畫面下方將出現版本編號。</p>
+                    <p>方法3：打開升級版SC Mobile 應用程式，點選畫面右上角問號按鈕，畫面下方將出現版本編號。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>我是現行的SC Mobile 應用程式用戶。我是否需要重新登記SC Mobile賬戶或重新設定SC Mobile Key（流動保安編碼）/ 指紋認證 （Touch ID）/ 生物認證（Face ID）以使用升級版 SC Mobile 應用程式？</h5></div>
+                    <div class="answer_blk">
+                    <p>不需要。您只需於流動裝置的應用程式商店更新SC Mobile 應用程式即可使用升級版SC Mobile 應用程式。所有用戶名稱、密碼、SC Mobile Key、指紋認證 、生物認證、推送訊息的設定將維持不變。您無需重新登記SC Mobile 賬戶或重新設定SC Mobile Key。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>我甚麽時候可以開始使用升級版SC Mobile 應用程式？</h5></div>
+                    <div class="answer_blk">
+                    <p>密切期待！由於更新需時，您可於11月中後前往流動裝置應用程式商店或於我們官網下載升級版SC Mobile 應用程式 。特選客戶或於11月初即可預先體驗我們升級版 SC Mobile。 </p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>現行之SC Mobile 應用程式 將於甚麽時候停止使用？</h5></div>
+                    <div class="answer_blk">
+                    <p>若您未有自行升級至升級版 SC Mobile 應用程式，我們將於2023年12月8日起將現有用戶升級至升級版SC Mobile 應用程式，詳情請留意網站的公佈。 </p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>下載升級版SC Mobile 應用程式後，我能否再使用現行的SC Mobile 應用程式？</h5></div>
+                    <div class="answer_blk">
+                    <p>很抱歉，為統一流程及配合銀行系統進行全面提升，客戶下載升級版SC Mobile 應用程式後將無法再使用現行的SC Mobile 應用程式版本。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>是次升級會否對網上理財造成影響？</h5></div>
+                    <div class="answer_blk">
+                    <p>沒有。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>爲何升級版SC Mobile 應用程式沒有於登入畫面顯示快捷鍵？</h5></div>
+                    <div class="answer_blk">
+                    <p>為配合界面及登入速度的提升，我們已升級用戶界面。 </p>
+                    <ul>
+                    <li>轉賬或提款（QR Cash）功能可於「轉賬及付款」主頁或頁面查找</li>
+                    <li>投資或保險可於「投資」頁面查找</li>
+                    <li>網上櫃位取票服務請按登入頁面上右上角按鈕或登入後右上角之按鈕選項內查找。</li>
+                    </ul>
+                    <p></p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>我的流動裝置與升級版SC Mobile 應用程式兼容嗎？爲何升級後，我未能使用SC Mobile 應用程式？</h5></div>
+                    <div class="answer_blk">
+                    <p>SC Mobile 應用程式支援的流動裝置包括：</p>
+                    <ul>
+                    <li>iPhone、iPad及iPod Touch（使用 iOS／iPadOS系統版本 14.0 或以上，不包括Beta版本）</li>
+                    <li>Android™ 手機（使用Android系統版本 9.0 或以上，不包括Beta版本）</li>
+                    <li>Touch ID／Face ID認證功能只適用於支援Touch ID／Face ID的Apple iPhone、iPad及iPod Touch型號</li>
+                    <li>指紋認證只適用於兼容Android系統版本 9.0 或以上的Android™設備。</li>
+                    </ul>
+                    <p>若您的流動裝置符合上述要求但未能成功使用SC Mobile，請提升您的系統版本以體驗全新的 SC Mobile。<br>
+                    為配合系統進行全面提升，我們恕未能為未達到上述兼容性要求的流動裝置進行升級。 若您的流動裝置未能符合上述要求，歡迎您使用渣打網上理財以繼續使用我們服務。</p>
+                    </div>
+                    </div>
+                    <div class="faq_contain">
+                    <div class="question_blk"><h5>我正在使用Android™ 手機，爲何打開升級版SC Mobile 應用程式時會出現系統錯誤？</h5></div>
+                    <div class="answer_blk">
+                    <p>因系統安全性原因，部分使用Android™ 手機而未有使用官方鍵盤的用戶將暫時未能使用升級版SC Mobile 應用程式。請先切換至官方鍵盤或使用渣打網上理財。</p>
+                    </div>
+                    </div>
+                    
+
+            </div>
+        </div>
+
+
+        <div class="faq_section">
+            <div class="section_descript">
+                <h3>登記流動理財</h3>
+                <ul>
+					<li>新登記？了解基本設定</li>
+					<li>支援的流動裝置</li>
+					<li>已被破解的裝置</li>	
+				</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+                <div class="faq_contain">
+<div class="question_blk"><h5>如何開始使用SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p><span style="text-decoration:underline">新流動理財用戶（個人銀行客戶）： </span>
+<br>步驟1：於登入畫面上輕觸「按此登記」。 
+<br>步驟2：選擇使用提款卡/扣賬卡及自動櫃員機私人密碼（PIN）登記全面的數碼銀行服務。若您以提款卡/信用卡及電子理財私人密碼（TIN），您可於<a href="https://www.sc.com/hk/zh/ibk-redirect/">渣打網上理財</a>登記。 
+
+<br>步驟3：憑提款卡登記，輸入您的提款卡號碼、有效期限及自動櫃員機私人密碼。 
+
+<br>步驟4：確認您在我們登記的手提電話號碼，您會收到內有一次有效密碼的短訊。 
+
+<br>步驟5：輸入您的一次有效密碼。 
+
+<br>步驟6：確認您在我們已登記之電郵地址或更新電郵地址。 
+
+<br>步驟7：設定您的用戶名稱及密碼。
+</p>
+
+<p>
+<span style="text-decoration:underline">新流動理財用戶（信用卡客戶）： </span>
+
+<br>步驟1：於登入畫面上輕觸「按此登記」。 
+
+<br>步驟2：選擇信用卡登記理財服務 
+
+<br>步驟3：憑信用卡登記，輸入您的信用卡號碼、有效期限、出生日期及香港身份證號碼。 
+
+<br>確認您在我們登記的手提電話號碼，您會收到內有一次有效密碼的短訊。 
+
+<br>步驟4：確認您在我們登記的手提電話號碼，您會收到內有一次有效密碼的短訊。 
+
+<br>步驟5：輸入您的一次有效密碼。 
+
+<br>步驟6：設定您的用戶名稱及密碼。 
+</p>
+
+<p>
+<span style="text-decoration:underline">現有流動理財用戶 </span>
+
+<br>立即輸入網上理財用戶名稱及密碼登入SC Mobile 應用程式。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我沒有自動櫃員機私人密碼/ 電話理財私人密碼，我應該如何登記SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p>如沒有自動櫃員機私人密碼/ 電話理財私人密碼，您仍然可以根據信用卡客戶步驟登記網上理財，但您只能享用有關信用卡理財服務以查閱信用卡結餘及交易/ 查閱電子月結單/ 兌換「 360°全面賞」積分/ 現金回贈的服務。
+<br>如您想享用全面的數碼銀行服務，請聯絡客戶服務熱線以便安排郵寄自動櫃員機私人密碼/ 電話理財私人密碼，或親臨分行領取。 </p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我可否於海外使用 SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p>無論您身在全球任何地方，均可輕鬆便利地享受我們的流動理財，惟部分受國際經濟制裁的國家除外。我們矢志遵從有關制裁。因此，我們概不允許在古巴、伊朗、朝鮮、蘇丹、敍利亞、克里米亞和塞瓦斯托波爾直接或間接使用我們的產品及服務。
+<br>在您前往古巴、伊朗、朝鮮、蘇丹、敍利亞、克里米亞或塞瓦斯托波爾期間，將不可使用我們的產品與服務。待您離開這些國家之後，即可繼續使用。 </p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>SC Mobile 應用程式是否支援我的手機？</h5></div>
+<div class="answer_blk">
+<p>SC Mobile支援的流動裝置包括：</p>
+<ul>
+<li>iPhone、iPad及iPod Touch（使用 iOS／iPadOS系統版本 14.0 或以上，不包括Beta版本）</li>
+<li>Android™ 手機（使用Android系統版本 9.0 或以上，不包括Beta版本）</li>
+<li>Touch ID／Face ID認證功能只適用於支援Touch ID／Face ID的Apple iPhone、iPad及iPod Touch型號 </li>
+<li>指紋認證只適用於兼容Android系統版本 9.0 或以上的Android™設備。 </li>
+</ul>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>已被破解或修改（以「Jailbreak（越獄）」或「Root機」等手法改裝）的裝置可以使用SC Mobile 應用程式嗎？</h5></div>
+<div class="answer_blk">
+<p>很抱歉。由於已被破解的裝置會令客戶較容易蒙受欺詐交易的風險，為保障客戶利益，當我們的系統偵測到您的流動裝置已被破解，您將不能使用SC Mobile 應用程式。為確保你的賬戶及個人資料安全得到保障，請使用其他未被破解的裝置登入SC Mobile 應用程式。</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>用戶可如何更改語言設定？</h5></div>
+<div class="answer_blk">
+<p>新下載用戶：於歡迎頁面選擇您的首選語言。 
+<br>現有用戶：可於登入前輕觸右上角問號按鈕並選擇語言功能，即可切換首選語言。 
+</p> 
+</div>
+</div>		 				
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我如何將SC Mobile Key（流動保安編碼）轉移到新裝置？</h5></div>
+<div class="answer_blk">
+<p>請於新裝置登入應用程式，並輸入個人網上理財的用戶名稱及密碼，選擇切換流動保安編碼至新裝置。 
+
+<br>
+
+<br>登記SC Mobile Key的步驟如下： 
+
+<br>步驟1：登入您的SC Mobile 應用程式後，您將會收到提示登記SC Mobile Key。 
+
+<br>步驟2：輸入以電郵形式發送給您的一次有效密碼。 
+
+<br>步驟3：輸入以短訊形式發送給您的一次有效密碼。 
+
+<br>步驟4：設定您的6位數字密碼。 
+
+<br>步驟5：成功登記。您現可透過您的6位數字密碼，在新裝置驗證所有交易。 
+
+<br>當您成功於新裝置啟動流動保安編碼，舊裝置的流動保安編碼及其6位數字密碼將會失效。 
+
+<br>
+
+<br>如您已遺失舊的流動裝置，請立刻致電渣打客戶服務熱線 <a href="tel:(852)2886-8868">(852)2886-8868</a>，我們將協助您停用這些服務。隨後，請於新裝置上以網上理財的用戶名稱及密碼登入，並設置流動保安編碼。 
+</p> 
+</div>
+</div>
+                
+
+            </div>
+        </div>
+		
+		
+<div class="faq_section">
+            <div class="section_descript">
+                <h3>登入、密碼及安全 （轉移至新的流動裝置）</h3>
+                <ul>
+										<li>取得離線密碼作登入</li>
+										<li>如何於第二部流動裝置登入</li>
+										<li>忘記用戶名稱/密碼</li>	
+										<li>Face ID/Touch ID </li>
+										<li>遺失流動裝置 </li>
+										<li>密碼被盜用</li>	
+										<li>懷疑資料外洩 </li>	
+									</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+      
+<div class="faq_contain">
+<div class="question_blk"><h5>我忘記了SC Mobile 應用程式的登入名稱/ 密碼，怎麼辦？ </h5></div>
+<div class="answer_blk">
+<p><span style="text-decoration:underline">手機應用程式裡重設</span>
+<br>步驟1：開啟SC Mobile 應用程式。 
+
+<br>步驟2：輕觸 「登入」&gt; 「忘記密碼？」。 
+
+<br>步驟3：選擇以下選項之一</p>
+
+<ul>
+	<li>如您持有提款卡/ 扣賬卡及自動櫃員機私人密碼（PIN）選擇「方法1 」。</li>
+	<li>如您持有信用卡但沒有電子理財私人密碼（TIN），選擇「方法2 」。 </li>
+</ul>
+<p>	
+<br>步驟4：接受條款及細則並按照餘下指示完成網上理財賬戶重設。 
+<br>如您持有提款卡/ 信用卡及電子理財私人密碼（TIN），請於渣打網上理財重設登入名稱/ 密碼。 
+</p>
+</div>
+<div class="answer_blk">
+<p>
+<span style="text-decoration:underline">於網頁上重設</span>
+
+<br>步驟1：前往<a href="https://www.sc.com/hk/zh">www.sc.com/hk/zh/</a>。 
+
+<br>步驟2：於置頂目錄上選擇「登入」&gt;「渣打網上理財」。 
+
+<br>步驟3：於登入位置下選擇「忘記了用戶名稱或密碼」。 
+
+<br>步驟4：選擇以下選項之一 
+
+</p><ul>
+	<li>如您持有提款卡/ 扣賬卡及自動櫃員機私人密碼（PIN）或 提款卡/信用卡及電子理財私人密碼（TIN），選擇「方法1 」。</li>
+	<li>如您持有信用卡但沒有電子理財私人密碼（TIN），選擇「方法2 」。</li>
+</ul>
+
+<br>步驟5：接受條款及細則並按照餘下指示完成網上理財賬戶重設。 
+<p></p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何更改SC Mobile 應用程式的登入密碼？</h5></div>
+<div class="answer_blk">
+<p>步驟1：登入您的SC Mobile 應用程式後，於下方選項列選擇「服務」。 
+<br>步驟2：於設定目錄上輕觸「密碼及安全」&gt;「更改密碼」。
+<br>步驟3：按照指示輸入「原有密碼」、「新密碼」並「再次輸入新密碼」，然後輕觸「繼續」。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我可以更改SC Mobile 應用程式的登入名稱嗎？</h5></div>
+<div class="answer_blk">
+<p>
+您可以跟隨忘記密碼方式重設登入名稱
+
+<br>手機應用程式裡重設 
+
+<br>步驟1：開啟SC Mobile 應用程式。 
+
+<br>步驟2：輕觸 「登入」&gt; 「忘記密碼？」。 
+
+<br>步驟3：選擇以下選項之一 
+
+<br>如您持有提款卡/ 扣賬卡及自動櫃員機私人密碼（PIN）選擇「方法1 」。 
+
+<br>如您持有信用卡但沒有電子理財私人密碼（TIN），選擇「方法2 」。 
+
+<br>步驟4：接受條款及細則並按照餘下指示完成網上理財賬戶重設。 
+
+<br>如您持有提款卡/ 信用卡及電子理財私人密碼（TIN），請於渣打網上理財重設登入名稱/ 密碼。 
+</p> 
+<br>
+<p>
+於網頁上重設 
+
+<br>步驟1：前往<a href="https://www.sc.com/hk/zh">www.sc.com/hk/zh/</a>。 
+
+<br>步驟2：於置頂目錄上選擇「登入」&gt;「渣打網上理財」。 
+
+<br>步驟3：於登入位置下選擇「忘記了用戶名稱或密碼」。 
+
+<br>步驟4：選擇以下選項之一 
+
+<br>如您持有提款卡/ 扣賬卡及自動櫃員機私人密碼（PIN）或 提款卡/信用卡及電子理財私人密碼（TIN），選擇「方法1 」。 
+
+<br>如您持有信用卡但沒有電子理財私人密碼（TIN），選擇「方法2 」。 
+
+<br>步驟5：接受條款及細則並按照餘下指示完成網上理財賬戶重設。 
+
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何啟動使用指紋認證（Touch ID）/ 生物認證（Face ID）登入 SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p>
+SC Mobile支援的流動裝置包括：
+
+<br>步驟 1：輕觸流動理財登入版面的面孔/ 手指圖示，選擇「立即啟動」。 
+
+<br>步驟2：使用您的網上理財用戶名稱和密碼登入，以啟動指紋認證（Touch ID）/ 生物認證（Face ID）服務。仔細閱讀並接受條款及細則。 
+
+
+<br>步驟3：輸入從手機短訊所收取的「一次有效密碼」。 
+
+<br>步驟4：啟用此功能以完成登記，從此即可以指紋認證（Touch ID）/ 生物認證（Face ID）登入。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何停止使用指紋認證（Touch ID）/ 生物認證（Face ID）登入 SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p>
+步驟1：登入您的SC Mobile 應用程式後，於下方選項選擇「服務」。 
+
+<br>步驟2：於設定目錄上輕觸「密碼及安全」&gt;「管理生物識別登入」。 
+
+<br>步驟3：於「啟動指紋認證」或「啟動生物認證」的左邊切換按鈕向左拉動以停止使用指紋認證（Touch ID）/ 生物認證（Face ID）。 
+
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>哪些手機/ 流動裝置支援指紋認證（Touch ID）/ 生物認證（Face ID）登入?</h5></div>
+<div class="answer_blk">
+<p>
+指紋登入服務支援備有指紋辨識功能和以下操作系統的Apple/ Android 手機： 
+
+<br>Apple iOS版本11或以上 
+
+<br>Android操作系統7.0 Nougat （API24） 或以上 
+
+<br>面孔登入服務支援備有面孔辨識功能的Apple iPhone X或更新型號和Apple iOS版本11或以上。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>假如我的手機/ 流動裝置上儲存了第三方的面孔/ 指紋檔案，對方可否登入SC Mobile 應用程式？</h5></div>
+<div class="answer_blk">
+<p>可以，但應避免與他人分享使用裝置。</p> 
+</div>
+</div>						
+
+<div class="faq_contain">
+<div class="question_blk"><h5>假如我更改手機/ 流動裝置的指紋認證（Touch ID）/ 生物認證（Face ID）設定，我能否繼續在SC Mobile 應用程式使用生物認證登入？</h5></div>
+<div class="answer_blk">
+<p>
+您需重新啟動指紋認證（Touch ID）/ 生物認證（Face ID）。 
+
+<br>步驟 1：輕觸流動理財登入版面的面孔/手指圖示，選擇「立即啟動」。 
+
+<br>步驟2：使用您的網上理財用戶名稱和密碼登入，以啟動指紋認證（Touch ID）/ 生物認證（Face ID）服務。仔細閱讀並接受條款及細則。 
+
+<br>步驟3：輸入從手機短訊所收取的「一次有效密碼」。 
+
+<br>步驟4：啟用此功能以完成登記，從此即可以指紋認證（Touch ID）/ 生物認證（Face ID）登入。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>假如我使用指紋認證（Touch ID）/ 生物認證（Face ID）登入而未能被辨識，我是否可使用我的登入名稱/ 密碼用以登入？</h5></div>
+<div class="answer_blk">
+<p>
+可以。您能夠自由選擇以指紋認證（Touch ID）/ 生物認證（Face ID）或使用您的登入名稱/ 密碼用以登入。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我遺失了已啟用SC Mobile Key（流動保安編碼）的手機/ 流動裝置，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>在您找到新手機再次登記 SC Mobile Key前，請立即致電渣打客戶服務熱線，我們將協助您停用SC Mobile Key服務。 
+
+<br>「優先理財」 <a href="tel:（852）2886-8866">（852）2886-8866</a>
+
+<br>「Premium理財」 <a href="tel:（852）2886-8877">（852）2886-8877</a>
+
+<br>其他客戶 <a href="tel:（852）2886-8888">（852）2886-8888</a>
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我懷疑我的SC Mobile 應用程式的登入資料（包括用戶名稱或/ 及密碼）出現外洩情況，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>請立即致電渣打客戶服務熱線，我們將協助您停用賬戶。  
+
+<br>「優先理財」 <a href="tel:（852）2886-8866">（852）2886-8866</a>
+
+<br>「Premium理財」 <a href="tel:（852）2886-8877">（852）2886-8877</a>
+
+<br>其他客戶 <a href="tel:（852）2886-8888">（852）2886-8888</a>
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我遺失了我的提款卡，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>
+您可以透過SC Mobile報失，我們將爲您補發相關的卡。 
+
+<br>步驟1：登入SC Mobile應用程式 
+
+<br>步驟2：於下方選項列選擇「服務」，輕觸「存款及扣賬卡」 
+
+<br>步驟3：選擇需要報失之信用卡，然後輕觸「管理卡」&gt;「報失或封鎖卡」 
+
+<br>步驟4：閱讀重要事項及確認以進行報失 
+
+<br>補發卡會郵寄至您登記的郵寄地址，如您未能在列表中找到要報失之提款卡 ，請致電我們的24小時報失熱線 <a href="tel:（852）2886-6016">（852）2886-6016</a> 作報失安排。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我遺失了我的信用卡，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>
+您可以透過SC Mobile報失，我們將爲您補發相關的卡。 
+
+<br>步驟1：登入SC Mobile應用程式 
+
+<br>步驟2：於下方選項列選擇「服務」，輕觸「信用卡」&gt;「報失/ 被盜信用卡」 
+
+<br>步驟3：選擇需要報失之信用卡 
+
+<br>步驟4：閱讀重要事項及確認以進行報失 
+
+<br>補發卡會郵寄至您登記的郵寄地址，如您未能在列表中找到要報失之信用卡，請致電我們的24小時報失熱線 <a href="（852）2886-6016">（852）2886-6016</a> 作報失安排。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我發現我的信用卡/ 戶口有可疑/ 欺詐/ 不屬於我的交易紀錄，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>
+您可以登入SC Mobile提出信用卡交易爭議請求。 
+
+<br>步驟1：於下方選項列選擇「服務」，輕觸「信用卡」&gt;「信用卡交易爭議」 
+
+<br>步驟2：選擇有關之信用卡 
+
+<br>步驟3：選擇爭議原因 
+
+<br>步驟4：選擇爭議交易 
+
+<br>步驟5：提供更多資料及上載文件 
+
+<br>步驟6：閱讀重要事項及確認 
+
+<br>步驟7：最新訊息將透過短訊及電郵通知您 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我懷疑我的信用卡/ 提款卡的自動櫃員機私人密碼出現外洩情況，怎麼辦？</h5></div>
+<div class="answer_blk">
+<p>
+請立即致電渣打客戶服務熱線，我們將協助您停用相關信用卡/ 戶口，並作出補發安排。 
+
+<br>「優先理財」 <a href="tel:（852）2886-8866">（852）2886-8866</a>
+
+<br>「Premium理財」 <a href="tel:（852）2886-8877">（852）2886-8877</a>
+<br>其他客戶 <a href="tel:（852）2886-8888">（852）2886-8888</a>
+</p> 
+</div>
+</div>
+
+            </div>
+        </div>
+		
+		<div class="faq_section">
+            <div class="section_descript">
+                <h3>流動保安編碼SC Mobile Key</h3>
+                <ul>
+					<li>設定、認證或更改SC Mobile Key 的6位數字密碼</li>
+					<li>取得離線密碼作交易</li>
+				</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+      <div class="faq_contain">
+<div class="question_blk"><h5>SC Mobile Key（流動保安編碼）是甚麼？</h5></div>
+<div class="answer_blk">
+<p>SC Mobile Key是一個在渣打流動理財應用程式的增強功能使您能夠驗證網上理財服務的登入和交易。 在您的手機上綁定及啟用SC Mobile Key後，不再需要使用一次有效密碼或/及交易密碼。</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>使用SC Mobile Key有甚麼好處？</h5></div>
+<div class="answer_blk">
+<p>透明：不再需要輸入一次有效密碼來驗證您的銀行交易或網上股票投資服務。 讓SC Mobile Key服務為您處理。 
+<br>安全：執行高風險交易如新增收款人時，SC Mobile Key服務會以數碼方式驗證您的高風險交易增加一層保障。 
+<br>任何地方：擔心您在海外而不能使用SC Mobile Key服務？ 我們的SC Mobile Key服務即使在沒有數據連接的情況下仍可以使用。 在離線情況下，您可以在使用問答回應碼下取得離線交易密碼來執行高風險的交易驗證。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何啟用SC Mobile Key？</h5></div>
+<div class="answer_blk">
+<p>請先下載最新的SC Mobile 應用程式，以您的網上理財用戶名稱及密碼或指紋認證（Touch ID）/ 生物認證（Face ID）登入後，其後頁面便會提示您如何綁定及啟用SC Mobile Key服務。</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>為甚麼我需要設定一個SC Mobile Key 6位數字密碼？</h5></div>
+<div class="answer_blk">
+<p>渣打SC Mobile Key 6位數字密碼為您提供額外的保障來執行高風險交易驗證（例如新增收款人、轉賬額設定及更新個人資料等等）或取得離線密碼。 只有您知道該6位數字密碼來執行這些類型的銀行交易。</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>當我更換手機時是否需要重新設定SC Mobile Key？</h5></div>
+<div class="answer_blk">
+<p>需要。SC Mobile Key只能綁定一部手機，如您想將SC Mobile Key轉換至新手機，請重新設定SC Mobile Key。</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我忘記了SC Mobile Key的6位數字密碼，怎麼辦？</h3> 
+</div>
+<div class="answer_blk">
+<p>您可於 SC Mobile 內重設：</p>
+<p>新下載用戶：於歡迎頁面選擇您的首選語言。 
+<br>步驟1：登入您的SC Mobile 應用程式後，於下方選項列選擇「服務」。 
+
+<br>步驟2：於設定目錄上輕觸「更改 SC Mobile Key」&gt;「更改密碼」。 
+
+<br>步驟3：輸入以電郵形式發送給您的一次有效密碼。 
+
+<br>步驟4：輸入以短訊形式發送給您的一次有效密碼。 
+
+<br>步驟5：設定您的6位數字密碼。 
+
+<br>步驟6：成功重設。您現可透過您新的6位數字密碼，驗證所有交易。 
+</p> 
+</div>
+</div>						
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何更改SC Mobile Key的6位數字密碼？</h5></div>
+<div class="answer_blk">
+<p>您可於 SC Mobile 內重設： 
+
+<br>步驟1：登入您的SC Mobile 應用程式後，於下方選項列選擇「服務」。 
+
+<br>步驟2：於設定目錄上輕觸「更改 SC Mobile Key」&gt;「更改密碼」。 
+
+<br>步驟3：輸入以電郵形式發送給您的一次有效密碼。 
+
+<br>步驟4：輸入以短訊形式發送給您的一次有效密碼。 
+
+<br>步驟5：設定您的6位數字密碼。 
+
+<br>步驟6：成功更改。您現可透過您新的6位數字密碼，驗證所有交易。 
+
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我可否在多個手機/ 流動裝置上啟用SC Mobile Key？</h5></div>
+<div class="answer_blk">
+<p>不可以。基於安全理由，您只可於一部手機/ 流動裝置上登記SC Mobile Key。如果您想於新的手機/ 流動裝置上登記SC Mobile Key，您之前於其他手機的登記將會被取消。</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我在使用渣打網上理財/ 其他裝置登入但沒有收不到推送訊息 / 未能連接 Wi-Fi 或數據服務，我如何取得離線密碼以作登入驗證？ </h5></div>
+<div class="answer_blk">
+<p>步驟1：於SC Mobile應用程式登入頁面，輕觸「獲取離線密碼」&gt;「獲取登入離線密碼」。 
+
+<br>步驟2：根據指示輸入您的SC Mobile Key的6位數字密碼後，SC Mobile將顯示6位的一次離線有效密碼。 
+
+<br>步驟3：在網頁/ 其他裝置中輸入6位的一次離線有效密碼以完成登入驗證。 
+
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我在使用渣打網上理財/ 其他裝置交易但沒有收不到推送訊息 / 未能連接 Wi-Fi 或數據服務，我如何取得離線密碼以作交易驗證？</h5></div>
+<div class="answer_blk">
+<p>步驟1：於SC Mobile應用程式登入頁面，輕觸「獲取離線密碼」&gt;「獲取交易離線密碼」。 
+<br>步驟2：根據指示輸入您的SC Mobile Key的6位數字密碼 
+
+<br>步驟3：渣打網上理財/ 其他裝置頁面會顯示8位數字，在SC Mobile應用程式內輸入此組密碼然後按「確認」後，SC Mobile將顯示6位的一次離線有效密碼。 
+
+<br>步驟4：在網頁/ 其他裝置中輸入6位的一次離線有效密碼以完成交易驗證。 
+
+</p> 
+</div>
+</div>
+
+
+            </div>
+        </div>
+		
+		<div class="faq_section">
+            <div class="section_descript">
+                <h3>電子理財服務及更新個人資料 </h3>
+                <p>非產品及自助數碼服務 （例如：網上櫃位取票服務，更新電郵地址、聯絡地址等個人資料）</p>
+            </div>
+
+            <div class="detailed_faq">
+
+      <div class="faq_contain">
+<div class="question_blk"><h5>我可以在SC Mobile 應用程式上更改我的個人資料，如電郵地址、聯絡地址及手機號碼嗎？</h5></div>
+<div class="answer_blk">
+<p>可以, 請預先登記SC Mobile Key,登入SC Mobile 應用程式 並於更新客戶資料提交申請。 
+
+<br>注意: SC Mobile 應用程式不支援更改海外/本地流動電話號碼服務。如需更改, 請登記SC Mobile Key, 並登入渣打網上理財更改。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>已更改的個人資料，需要多久時間才會在銀行系統紀錄內生效？</h5></div>
+<div class="answer_blk">
+<p>申請最多需四個工作天處理。當申請處理完成時, 您將會收到不同方式的通知（如短信、電郵及信件）。</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何提前在網上櫃位取票？</h5></div>
+<div class="answer_blk">
+<p>您可於SC Mobile 右上方點選「問號」&gt;選項選擇「親臨分行」&gt;「網上櫃位取票/網上預約服務」取票。</p> 
+</div>
+</div>
+
+            </div>
+        </div>
+    
+        <div class="faq_section">
+            <div class="section_descript">
+                <h3>通訊喜好</h3>
+                <ul>
+					<li>服務推送訊息</li>
+					<li>市場推廣推送訊息</li>
+					<li>啟動或暫停推送訊息</li>	
+					<li>更改推送訊息的類型</li>
+					<li>生效時間</li>	
+					<li>推送訊息不適用於内地客戶</li>
+					<li>市場推廣喜好</li>	
+					<li>開放銀行同意書</li>
+				</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+
+<div class="faq_contain">
+<div class="question_blk"><h5>推送訊息的作用是甚麽?</h5></div>
+<div class="answer_blk">
+<p>推送訊息是一項透過電子方式，將理財有關的通知（如服務訊息、交易提示、優惠及產品資訊） 推送至SC Mobile 應用程式，同時有關的訊息亦會儲存於訊息中心。 </p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何啟動推送訊息以收到最新的銀行資訊？</h5></div>
+<div class="answer_blk">
+<p>您可以通過以下兩種方式啟動推送訊息:</p>
+<ul>
+<li>於SC Mobile 應用程式登入後，於下方選項選擇「服務」&gt;「設定推送訊息」以啟動推送訊息。</li>
+<li>於SC Mobile 應用程式的頁面點選右上角的「鈴聲」&gt;「啟動」以啟動推送訊息。</li>
+</ul>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何取消推送訊息？</h5></div>
+<div class="answer_blk">
+<p>您可於SC Mobile 應用程式登入後，於下方選項選擇「服務」&gt;「設定推送訊息」以取消推送訊息。</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如果取消推送訊息，會有甚麼情況出現？</h5></div>
+<div class="answer_blk">
+<p>您將以短訊或電郵方式收取訊息。</p>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如推送訊息未能發送至我的手機，會有甚麼情況出現？ </h5></div>
+<div class="answer_blk">
+<p>您將以短訊或電郵方式收取訊息。</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我會收到甚麽類型的推送訊息？</h5></div>
+<div class="answer_blk">
+<p>訊息種類包括服務訊息、交易提示、優惠及產品資訊。如銀行戶口的繳付賬單、提款、轉賬、購物、退票及信用卡的還款日提示。 
+</p> 
+</div>
+</div>						
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如果我有多過一部手機，我可於多部手機啟動推送訊息嗎？ </h5></div>
+<div class="answer_blk">
+<p>基於安全理由，您只可於一部手機啟動推送訊息。如果您想於新的手機啟動推送訊息，您之前於其他手機的登記將會被取消。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如果我遺失了我的手機，應該怎辦？</h5></div>
+<div class="answer_blk">
+<p>在您找到新手機再次啟動推送訊息前，請立即致電客戶服務熱線，以便關閉訊息中心。  
+</p> 
+<ul>
+<li>「優先理財」 <a href="tel:（852）2886-8866">（852）2886-8866</a></li>
+<li>「Premium理財」<a href="tel:（852）2886-8877">（852）2886-8877</a></li>
+<li>其他客戶 <a href="tel:（852）2886-8888">（852）2886-8888</a></li>
+</ul>
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我買了一部二手手機，為何我不能於這手機啟動推送訊息？ </h5></div>
+<div class="answer_blk">
+<p>可能這手機曾經下載SC Mobile 應用程式及啟動推送訊息。請於您的手機删除SC Mobile 應用程式及重新下載以便啟動推送訊息。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何在SC Mobile 應用程式查閱推送訊息紀錄？ </h5></div>
+<div class="answer_blk">
+<p>您可於SC Mobile 應用程式登入後點選右上角的「鈴聲」&gt; 「通知」以查閱推送訊息紀錄。   
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>為何會建議使用iPhone 的用戶需最少於每三十日查看一次訊息中心？</h5></div>
+<div class="answer_blk">
+<p>建議使用iPhone的用戶，最少於每三十日查看一次訊息中心及啟動一次SC Mobile 應用程式，否則將不能接受推送訊息。  
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我是安卓用戶，為何我於中國不能接收推送訊息？ </h5></div>
+<div class="answer_blk">
+<p>因Google Play現時未能於中國使用，故安卓的手機不能於中國內地接收推送訊息。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>如何選擇哪種途徑收到優惠及產品資訊的訊息？  </h5></div>
+<div class="answer_blk">
+<p>您可於SC Mobile 應用程式登入後的的表單選項中點選「服務」&gt;「優惠及產品資訊」以選擇不同途徑收到優惠及產品資訊的訊息。  
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我每次消費時，都會收到通知，我可以把它關閉嗎? </h5></div>
+<div class="answer_blk">
+<p>當你使用信用卡進行交易時（無論是透過銷售點終端機或網上交易），我們都會通知你，這提示是不可以取消的。這提示是為了減低信用卡被盜用的風險，同時也幫助你的日常理財需要。 
+</p> 
+</div>
+</div>
+
+<div class="faq_contain">
+<div class="question_blk"><h5>我可以停止收取市場推廣通訊嗎？</h5></div>
+<div class="answer_blk">
+<p>可以，您可於SC Mobile 應用程式登入後的的表單選項中點選「服務」&gt;「優惠及產品資訊更改相關設定。
+</p> 
+</div>
+</div>
+            </div>
+        </div>
+		
+		
+		<div class="faq_section">
+            <div class="section_descript">
+                <h3>支付及轉賬</h3>
+                <ul>
+					<li>轉賬</li>
+					<li>預設交易指示</li>
+					<li>繳付賬單</li>	
+					<li>新增收款人</li>
+					<li>電匯/海外轉賬</li>
+					<li>電子錢包 （eg. AlipayHK）</li>	
+				</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+<div class="faq_contain" id="7-1">
+<div class="question_blk"><h5>我在哪裡可以設定我的每日轉賬限額？為甚麼我的每日轉賬限額被預設/ 重設為港幣0元？</h5></div>
+<div class="answer_blk">
+<p>您可透過渣打SC Mobile 應用程式「轉賬及付款」內的「每日轉賬額設定」更改每日網上轉賬限額。 
+
+<br>基於網上保安理由及保障您的銀行戶口，我們會為全新登記網上及流動理財的客戶預設每日網上轉賬額為港幣0元（軟件更新除外）。此外，若您一段時間並未透過網上理財或SC Mobile 應用程式使用其中一個轉賬類別限額（例如「轉賬至第三者或其他本地銀行戶口」），該轉賬類別限額亦會被重設為港幣0元。 
+</p>
+</div>
+</div>
+<div class="faq_contain" id="7-2">
+<div class="question_blk"><h5>使用信用卡作轉賬會收取任何費用嗎?</h5></div>
+<div class="answer_blk">
+<p>若閣下在於該曆月（以交易日計算為準）憑渣打/ MANHATTAN信用卡透過不時生效 之電子銀行服務、個人對個人(P2P)支付服務或流動裝置/應用程式/電子轉賬平台作任 何轉賬/增值到指定賬戶（包括但不限於八達通銀包）累積轉賬多於25,000港元，本行會就25,000港元其後之所有轉賬金額收取3.5%手續費並誌賬於其中一張累積最多 轉賬金額之有效信用卡賬戶內。如當月最後一天為星期日，任何當天之有關交易將計 算於下一個月份內。如持卡人於曆月的第一天以及在系統更新完成之前或之間進行交易，則該交易將計算於前一個曆月進行。持卡人於進行電子轉賬交易而累積轉賬金額多於最多轉賬金額時，網上銀行及/或流動應用程式將顯示可用而免收手續費之轉賬金額及其後因而衍生之手續費。持卡人於 確認進行轉賬時，則被視為承認並同意網上銀行及/或流動應用程式顯示而本行按本 條款或其他現行促銷條款及細則不時指定的手續費（如適用）。
+<br>閣下亦可參閱最新超額電子轉賬手續費推廣計劃條款及細則。 </p>
+</div>
+</div>
+<div class="faq_contain" id="7-3">
+<div class="question_blk"><h5>透過SC Mobile 應用程式新增本地賬戶/賬單收款人與網上理財會否有分別？</h5></div>
+<div class="answer_blk">
+<p>兩者並無分別，而且SC Mobile 應用程式及網上理財均會顯示同一收款人列表。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-4">
+<div class="question_blk"><h5>如何於 SC Mobile 應用程式 登記本地賬戶/賬單?</h5></div>
+<div class="answer_blk">
+<p>你可以透過SC Mobile 應用程式「轉賬及付款」內的「我的收款人」, 選擇「新增收款人」以作登記。</p>
+</div>
+</div>
+<div class="faq_contain" id="7-5">
+<div class="question_blk"><h5>「本地轉賬」與「SC Pay （轉數快）」有甚麼分別？</h5></div>
+<div class="answer_blk">
+<p>「本地轉賬」以銀行戶口號碼作轉賬，並且須事先透過SC Mobile 應用程式或網上理財登記該收款人，其每日轉賬限額屬第三者戶口轉賬之港幣1,000,000元。 
+<br>「SC Pay （轉數快）」以手提電話號碼、電郵地址或轉數快識別碼作轉賬，無需作任何收款人登記，其每日轉賬限額屬非登記受款人轉賬之港幣300,000元。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-6">
+<div class="question_blk"><h5>「本地轉賬」提供何種類型的轉賬服務?</h5></div>
+<div class="answer_blk">
+<p>「本地轉賬」提供轉賬至已登記的第三者渣打戶口或其他本地銀行戶口。此項服務適用於港幣及人民幣轉賬。
+</p> 
+</div>
+</div>						
+<div class="faq_contain" id="7-7">
+<div class="question_blk"><h5>為甚麼我未能於選擇支賬戶口作轉賬時看見我的信用卡?</h5></div>
+<div class="answer_blk">
+<p>請於選擇收款人頁面查看您的收款人是否經由簽署確認登記之戶口（以*表示），信用卡目前並不支援轉賬至經由簽署確認登記之戶口。 
+</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-8">
+<div class="question_blk"><h5>為甚麼我的轉賬會因「收款人名稱不正確」而被拒？</h5></div>
+<div class="answer_blk">
+<p>收款機構處理轉賬指示時可能會就其紀錄核對收款人名稱及戶口號碼等資料。為免轉賬被拒，請與收款人確認其於收款機構的戶口全名。如需更新，請重新於SC Mobile 應用程式或網上理財新增收款人。</p>
+</div>
+</div>
+<div class="faq_contain" id="7-9">
+<div class="question_blk"><h5>為甚麼我的收款人會被刪除？</h5></div>
+<div class="answer_blk">
+<p>於 SC Mobile 應用程式或網上理財登記之收款人戶口，若於十二個月內沒有任何從銀行戶口成功轉賬之紀錄，該收款人將會被刪除。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-10">
+<div class="question_blk"><h5>誰可以登記 SC Pay「轉數快」?</h5></div>
+<div class="answer_blk">
+<p>
+成功登記 SC Pay「轉數快」，您需要： 
+
+</p><ol>
+<li>成為渣打網上理財客戶， 並已登記使用SC Mobile 應用程式; </li>
+
+<li>在銀行持有有效手機號碼或電郵地址; 和 </li>
+<li>持有合資格的個人或聯名（任何一方簽署）之港幣或人民幣戶口（支票賬戶，儲蓄賬戶或綜合存款賬戶） </li>
+<ol>
+<p></p>
+</ol></ol></div>
+</div>
+<div class="faq_contain" id="7-11">
+<div class="question_blk"><h5>我已經持有包含港幣及人民幣的綜合存款戶口，但為甚麼於SC Pay「轉數快」輸入轉賬金額時只顯示港幣/人民幣？</h5></div>
+<div class="answer_blk">
+<p>請確保該綜合存款戶口已綁定為SC Pay登記戶口，並且其港幣及人民幣戶口均已啟動。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-12">
+<div class="question_blk"><h5>我能否以港幣戶口作人民幣轉賬，或轉賬人民幣至收款人的港幣戶口？</h5></div>
+<div class="answer_blk">
+<p>SC Pay「轉數快」目前只支援從已登記SC Pay的戶口作相同貨幣轉賬。如收款人的「轉數快」戶口並非已包括港幣及人民幣的綜合戶口，轉賬例如人民幣至港幣戶口可能會被拒。 
+</p> 
+</div>
+</div>						
+<div class="faq_contain" id="7-13">
+<div class="question_blk"><h5>甚麼是「轉數快」預設收款銀行？我的付款人會否知道我的預設收款銀行？</h5></div>
+<div class="answer_blk">
+<p>除非您的「轉數快」付款人指定轉賬至某間您已登記的銀行，否則款項將會傳送至您的預設收款銀行，而且不會向付款人透露收款銀行名稱。
+</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-14">
+<div class="question_blk"><h5>我能否於SC Mobile 應用程式查看其他銀行的「轉數快」登記？如何將渣打銀行更改為「轉數快」預設收款銀行？</h5></div>
+<div class="answer_blk">
+<p>您可於「管理」下的「SC Pay登記及設定」查閱以該手提電話號碼或電郵地址登記「轉數快」的其他銀行名稱並移除其紀錄。 
+
+<br>如您尚未設定渣打銀行為「轉數快」預設收款銀行，您可於該頁面所顯示的手提電話號碼或電郵地址側旁點開選項，並選擇「設置渣打銀行為預設收款銀行」。 
+</p>
+</div>
+</div>
+<div class="faq_contain" id="7-15">
+<div class="question_blk"><h5>我可以使用信用卡作SC Pay登記並收取「轉數快」款項嗎？</h5></div>
+<div class="answer_blk">
+<p>您須以渣打儲蓄/ 支票戶口作SC Pay登記，信用卡只可用作港幣支賬而非收取款項。</p>
+</div>
+</div>
+<div class="faq_contain" id="7-16">
+<div class="question_blk"><h5>我可以透過「繳付渣打信用卡」繳交親友的渣打信用卡嗎?</h5></div>
+<div class="answer_blk">
+<p>「繳付渣打信用卡」只適用於從您的銀行戶口繳付您的渣打信用卡。如需繳交親友的信用卡，請先於「繳付賬單」以信用卡號碼新增賬單收款人，然後再作付款。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-17">
+<div class="question_blk"><h5>我看到賬單上有「轉數快」二維碼可作繳費之用，我需要事先登記以使用「掃描支付」嗎？</h5></div>
+<div class="answer_blk">
+<p>使用「掃描支付」前，請先以我們紀錄的手提電話號碼或電郵地址及合資格渣打儲蓄/ 支票戶口於 SC Mobile 應用程式登記SC Pay。</p>
+</div>
+</div>
+<div class="faq_contain" id="7-18">
+<div class="question_blk"><h5>我可以使用「掃描支付」掃描其他支付平台的二維碼嗎？</h5></div>
+<div class="answer_blk">
+<p>「掃描支付」只支援「轉數快」二維碼。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-19">
+<div class="question_blk"><h5>有哪種錢包支援増值服務？</h5></div>
+<div class="answer_blk">
+<p>您可輕鬆増值AlipayHK賬戶及八達通銀包。
+</p> 
+</div>
+</div>						
+<div class="faq_contain" id="7-20">
+<div class="question_blk"><h5>我可以於「増值電子錢包」預設轉賬嗎？</h5></div>
+<div class="answer_blk">
+<p>「増值電子錢包」目前只支援即時轉賬。
+</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-21">
+<div class="question_blk"><h5>我的增值金額並沒有超過每日轉賬上限，為甚麼轉賬仍然被拒？</h5></div>
+<div class="answer_blk">
+<p>除了每日轉賬上限外，請查看您的AlipayHK賬戶或八達通銀包是否已經達到儲值限額。</p>
+</div>
+</div>
+<div class="faq_contain" id="7-22">
+<div class="question_blk"><h5>如何用SC Mobile 應用程式把新資金從第三方銀行/ 付款機構存入我的渣打戶口？</h5></div>
+<div class="answer_blk">
+<p>您可以透過SC Mobile應用程式「轉賬及付款」內的「存入」服務，無需切換應用程式也能方便從第三方銀行/ 付款機構存入款項。 
+
+<br>只需選擇收款戶口及付款機構，輸入付款戶口號碼，最後輸入 SC Mobile Key 的6位數字密碼就能完成登記。成功登記後，您便可簡單地將資金轉賬入我的渣打戶口（即存入交易）。 </p> 
+</div>
+</div>
+<div class="faq_contain" id="7-23">
+<div class="question_blk"><h5>哪些銀行/ 付款機構支援渣打的「存入」新資金功能？</h5></div>
+<div class="answer_blk">
+<p>
+您可以從以下付款機構存入資金： 
+
+<br>004 – 香港上海匯豐銀行有限公司 
+
+<br>009 – 中國建設銀行（亞洲）股份有限公司 
+
+<br>012 – 中國銀行（香港） 有限公司 
+
+<br>018 – 中信銀行（國際）有限公司 
+
+<br>024- 恒生銀行有限公司 
+
+<br>040 -大新銀行集團有限公司 
+
+<br>387 -眾安銀行有限公司 
+
+<br>388 – Livi Bank Limited 
+
+<br>389 – Mox Bank Limited 
+
+<br>391 – 富融銀行有限公司 
+</p>
+</div>
+</div>
+<div class="faq_contain" id="7-24">
+<div class="question_blk"><h5>如果我用「存入」功能，將我在其他銀行的資金「存入」至渣打戶口，每項/ 每日「存入」的最高「存入」金額是多少？如何更改？</h5></div>
+<div class="answer_blk">
+<p>每日存入限額最高可設定為港幣100,000元。如需更改每日存入限額，您需要先取消您的現有存入服務，並重新以新的存入限額登記。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-25">
+<div class="question_blk"><h5>如何查看過去的「存入」紀錄？</h5></div>
+<div class="answer_blk">
+<p>您可從收款戶口之交易紀錄查看資金存入與否。
+</p> 
+</div>
+</div>						
+<div class="faq_contain" id="7-26">
+<div class="question_blk"><h5>「轉賬紀錄」及「預設轉賬」的分別是甚麼？</h5></div>
+<div class="answer_blk">
+<p>「轉賬紀錄」列出已經執行之轉賬及付款，而「預設轉賬」所顯示的相反為尚待執行的指示。您可以於預定日期與收款人或商戶進行交易。此服務適用於我的戶口轉賬, 本地轉賬, 海外及跨境轉賬, 繳付賬單及信用卡。
+<br>	您只需要簡單地選擇交易日期，我們便會在該日期自動為您進行轉賬。您必須確保在交易日之一個工作天前，您的賬戶内有足夠進行交易的款項或信用額（若您使用信用卡支付）。 
+</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-27">
+<div class="question_blk"><h5>我可否於「預設轉賬」查看或更改常行指示？</h5></div>
+<div class="answer_blk">
+<p>「預設轉賬」暫時只會列出尚待執行之本地轉賬、海外及跨境轉賬、繳付賬單、繳付渣打信用卡，請登入網上理財以查看或更改常行指示。</p> 
+</div>
+</div>
+<div class="faq_contain" id="7-28">
+<div class="question_blk"><h5>如何更改已預設的轉賬或繳費日期、金額、重覆指示等資料？  </h5></div>
+<div class="answer_blk">
+<p>請登入網上理財以更改預設轉賬或繳費的指示。 
+</p>
+</div>
+</div>
+<div class="faq_contain" id="7-29">
+<div class="question_blk"><h5>我需要提供甚麼收款人資料以進行「海外及跨境轉賬」?</h5></div>
+<div class="answer_blk">
+<p>新增收款人作轉賬時，請準備以下資料： 
+
+</p><ol>
+<li>
+當地清算代碼 （可於網上理財/銀行月結單上查閱） 
+
+<ul>
+<li>澳洲 - 6位數字BSB Code</li>
+
+<li>加拿大 - 8 位數字Transit Number</li>
+
+<li>英國 - 6位數字Sort Code</li>
+
+<li>美國 - 9位數字ABA Routing Number</li>
+
+<li>其他地區 - 11位數字 SWIFT Code</li>
+</ul>
+</li>
+
+<li>收款人賬號 （如果匯款到英國/歐洲國家，請提供由最多34個字母和數字組成的IBAN，並可於收款人的網上理財/銀行月結單上查閱）</li>
+
+<li>收款人姓名 （必須與收款銀行記錄中的姓名相同）</li>
+
+<li>收款人地址 （包括省、城市和郵政編碼等）</li>
+</ol>
+<p></p> 
+</div>
+</div>
+<div class="faq_contain" id="7-30">
+<div class="question_blk"><h5>進行「海外及跨境轉賬」會被收取服務費/ 手續費嗎？</h5></div>
+<div class="answer_blk">
+<p>請參考<a href="https://av.sc.com/hk/zh/content/docs/hk-service-charges-zh.pdf">「服務收費」</a>。
+</p> 
+</div>
+</div>						
+<div class="faq_contain" id="7-31">
+<div class="question_blk"><h5>對方會在甚麼時候收到款項？</h5></div>
+<div class="answer_blk">
+<p>確實的收款時間受多個因素影響，如貨幣種類、付款中介機構的處理時間、當地銀行的營業及結算日等因素。版面上顯示之收款時間僅供參考。請預留足夠時間，提供準確及完整的匯款資料及確保賬戶內備有足夠資金﹝包括所需之服務費/ 手續費﹞，以確保收款人能按時收到款項。 
+</p> 
+</div>
+</div>
+
+            </div>
+        </div>
+		
+		
+		<div class="faq_section">
+            <div class="section_descript">
+                <h3>QR Cash無卡提款</h3>
+                <ul>
+					<li>設定提款指示</li>
+					<li>可以在哪裏使用</li>
+					<li>取消指示</li>	
+				</ul>
+            </div>
+
+            <div class="detailed_faq">
+
+<div class="faq_contain" id="8-1">
+<div class="question_blk"><h5>我已經成功設立QR Cash提款指示，是否能夠於任何一部渣打或銀通自動櫃員機提取現金？</h5></div>
+<div class="answer_blk">
+<p>透過QR Cash 提取現金適用於任何一部渣打自動櫃員機或附有銀通無卡提款貼紙的銀通自動櫃員機。 
+</p>
+</div>
+</div>
+<div class="faq_contain" id="8-2">
+<div class="question_blk"><h5>我可以在成功設立QR Cash提款指示後任何時間前往自動櫃員機提取現金嗎？</h5></div>
+<div class="answer_blk">
+<p>提款指示的有效期為60分鐘，之後您須重新設立指示。</p>
+</div>
+</div>
+<div class="faq_contain" id="8-3">
+<div class="question_blk"><h5>使用QR Cash無卡提款，每日最高提款金額是多少？如何更改？</h5></div>
+<div class="answer_blk">
+<p>每日最高無卡提款額為港幣10,000元或等值，並視乎您每日自動櫃員機交易預設限額或每張信用卡戶口的可動用信貸限額，以及相關條款及細則為準。</p> 
+</div>
+</div>
+<div class="faq_contain" id="8-4">
+<div class="question_blk"><h5>我可以從港幣賬戶中提取人民幣嗎？</h5></div>
+<div class="answer_blk">
+<p>我們目前只支援從所使用的賬戶提取相同貨幣，您可以先透過「我的戶口轉賬」從港幣兌換至人民幣，然後於QR Cash選擇從該人民幣戶口提取現金。請注意，透過QR Cash提取人民幣只用於渣打自動櫃員機。 </p>
+</div>
+</div>
+<div class="faq_contain" id="8-5">
+<div class="question_blk"><h5>我可以在海外使用QR Cash嗎？</h5></div>
+<div class="answer_blk">
+<p>QR Cash目前僅適用於香港。</p> 
+</div>
+</div>
+
+            </div>
+        </div>
+		
+		<div class="faq_section">
+            <div class="section_descript">
+                <h3>產品探索</h3>
+                <ul>
+										<li>最新優惠</li>
+										<li>如何申請</li>
+									</ul>
+            </div>
+
+            <div class="detailed_faq">
+<div class="faq_contain" id="14-1">
+<div class="question_blk"><h5>「探索」是甚麼？有甚麼用？</h5></div>
+<div class="answer_blk">
+<p>透過「探索」您可以瀏覽銀行的產品資訊、 服務及最新優惠。   
+</p>
+</div>
+</div>
+<div class="faq_contain" id="14-2">
+<div class="question_blk"><h5>我在「探索」看到適合我的產品/ 服務/ 優惠，如何申請？</h5></div>
+<div class="answer_blk">
+<p>您可以在產品資訊下， 按「立即申請」以申請產品/ 服務/ 優惠。</p>
+</div>
+</div>
+            </div>
+        </div>
+		
+		<div class="faq_section">
+<div class="section_descript">
+<h3>電子月結單/電子通知書</h3>
+<ul>
+<li>與紙張月結單的區別（例如：内容、費用、記錄查閲） </li>
+<li>紙張月結單費用及豁免</li>
+</ul>
+</div>
+
+<div class="detailed_faq">
+<div class="faq_contain" id="15-1">
+<div class="question_blk"><h5>何謂電子月結單/電子通知書?</h5></div>
+<div class="answer_blk">
+<p>電子月結單/電子通知書讓您透過SC Mobile 應用程式/ 渣打網上理財瀏覽月結單資料。電子月結單/電子通知書的內容與紙張版本相同。  
+</p>
+</div>
+</div>
+<div class="faq_contain" id="15-2">
+<div class="question_blk"><h5>電子月結單/ 電子通知書服務會收取費用嗎？</h5></div>
+<div class="answer_blk">
+<p>不會，電子月結單/ 電子通知書服務完全免費!</p>
+</div>
+</div>
+<div class="faq_contain" id="15-3">
+<div class="question_blk"><h5>如何申請電子月結單/ 電子通知書或要求更改服務選擇？</h5></div>
+<div class="answer_blk">
+<p>							
+步驟1：登入您的SC Mobile 應用程式後，前往「服務」 
+
+<br>步驟2：進入「設定」&gt;「通訊喜好」&gt;「電子結單/電子通知書偏好」&gt;「管理-申請類別」 
+
+<br>步驟3：選擇您的電子結單/電子通知書設定  
+</p>
+</div>
+</div>
+<div class="faq_contain" id="15-4">
+<div class="question_blk"><h5>我可以查看多久之前的電子結單/ 電子通知書？</h5></div>
+<div class="answer_blk">
+<p>
+<span style="text-decoration:underline">電子結單</span>
+<br>由2020 年1月1日起，如您於2019 年1月或之前成功登記電子月結單服務，您可於網上理財或SC Mobile 應用程式查閱由2019年1月至最近一期的電子月結單及保存長達7年， 如至2026年。 
+
+<br>由2020 年1月1日起，如您於2019 年1月後成功登記電子月結單服務，您可於網上理財或SC Mobile 應用程式查閱由成功登記月份至最近一期的電子月結單及保存長達7年， 如至2026年。 
+
+<span style="text-decoration:underline">電子通知書</span>
+</p><p>您可於網上理財或SC Mobile 應用程式查閱過去3個月的電子通知書。</p>
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+		
+		<div class="faq_section">
+<div class="section_descript">
+<h3>手機開戶</h3>
+<ul>
+<li>與分行開戶的區別</li>
+<li>申請資格</li>
+<li>所需文件</li>
+<li>費用</li>
+</ul>
+</div>
+
+<div class="detailed_faq">
+	<div class="faq_contain" id="16-1">
+<div class="question_blk"><h5>我可否經SC Mobile 應用程式申請綜合存款戶口？</h5></div>
+<div class="answer_blk">
+<p>
+您必須符合以下所有條件方能透過SC Mobile 應用程式申請綜合存款戶口： 
+
+</p><ol>
+<li>未持有以下任何渣打銀行（香港）有限公司之存款戶口︰</li>
+
+<ul>
+<li>儲蓄戶口</li>
+
+<li>往來／支票戶口</li>
+
+<li>綜合存款戶口</li>
+
+<li>定期存款戶口</li>
+
+<li>投資戶口</li>
+</ul>									 
+
+<li>持有有效香港身份證；</li>
+
+<li>香港永久性或非永久性居民，並年滿十八歲或以上；</li>
+
+<li>非美國居民、非美國公民及非持有美國永久居民身份證（綠卡）；</li>
+
+<li>開立此戶口作個人用途</li>
+
+實際所需時間或會因個別情況而有所不同。 								
+<p></p>
+</ol></div>
+</div>
+
+<div class="faq_contain" id="16-2">
+<div class="question_blk"><h5>我持有渣打信用卡，我可否經SC Mobile 應用程式申請綜合存款戶口？</h5></div>
+<div class="answer_blk">
+<p>可以，只要您現時未持有任何渣打存款戶口及符合以上其他要求，您便可以使用SC Mobile 應用程式開立戶口。成功開戶後，您的渣打信用卡個人資料將根據此申請表格自動同時更新。</p>
+</div>
+</div>
+
+<div class="faq_contain" id="16-3">
+<div class="question_blk"><h5>我曾經持有渣打戶口或信用卡，但我已將它們全部取消 。我現在可否使用此服務？</h5></div>
+<div class="answer_blk">
+<p>							
+可以，只要您現時成為我們新客戶及符合以上其他要求，您即可以透過渣打流動理財應用程式進行開戶。 
+</p>
+</div>
+</div>
+
+<div class="faq_contain" id="16-4">
+<div class="question_blk"><h5>為甚麼要拍攝身份證的正面及背面?為甚麼總是不成功？</h5></div>
+<div class="answer_blk">
+<p>
+拍攝身份證的正面及背面有助我們驗證您的香港身份證，讓您無需親自前往 我們的分行進行身份驗證。拍攝時請確保有足夠及穏定的光源，沒有被反光面或陰影遮掩，並確認身份證的影像清晰可見、不失焦。有些因素有機會導致身份驗證不成功，例如：強光、身份證上的劃痕、 損耗等，都可能影響系統對您的身份證及自拍照進行驗證及對比之準確性。 
+
+<br>如以上因素令系統未能檢測到有效的香港身份證，我們未能透過系統完成身份核實程序，請親臨我們任何一家分行辦理開戶手續。 
+
+</p>
+</div>
+</div>
+
+<div class="faq_contain" id="16-5">
+<div class="question_blk"><h5>我收到的通訊為：「我們需要更多資料以完成您的申請，請您於30天內携同您的身份證明文件親臨我們任何一間分行以完成開戶手續」我該怎麼辦？ </h5></div>
+<div class="answer_blk">
+<p>			我們可能需要您提供一些證明文件或回答一些跟進問題。請你於30天內携同您的身份證明文件親臨我們任何一間分行以完成開戶手續。為節省等候時間，您可在我們網站預約到指定分行開戶。　 
+</p>
+</div>
+</div>
+
+<div class="faq_contain" id="16-6">
+<div class="question_blk"><h5>成功開立戶口後，我還需要做甚麼?</h5></div>
+<div class="answer_blk">
+<p>
+成功開立綜合存款戶口後，我們會為你發出一張渣打銀聯單幣提款卡。請您於收到提款卡後，立即登入網上理財確認收妥新卡。 
+
+<br>另外，請於開戶後30天内登入SC Mobile 應用程式設定您的戶口並選擇合適的綜合理財服務及優惠。 
+
+<br>請留意SC Mobile 應用程式的戶口設定開放時間為星期一至日早上8時至晚上10時。 
+
+<br>如您未能完成戶口設定，您經SC Mobile 應用程式新開立之綜合存款戶口將維持一般儲蓄存款年利率及您的理財計劃會維持為Easy Banking。 
+
+</p>
+</div>
+</div>
+
+<div class="faq_contain" id="16-7">
+<div class="question_blk"><h5>爲甚麽新開立的戶口無法馬上進行提款及轉賬？</h5></div>
+<div class="answer_blk">
+<p>
+提款及轉賬功能會於戶口驗證後，即開戶後兩個工作天內啟動。 
+</p>
+</div>
+</div>
+</div>
+</div>
+		
+		
+		<div class="faq_section">
+<div class="section_descript">
+<h3>聯絡及支援</h3>
+<ul>
+<li>myRM</li>
+<li>與專屬客戶經理作文字對話或語音通話</li>
+<li>Stacy智能助理與即時對話</li>
+</ul>
+</div>
+
+<div class="detailed_faq">
+<div class="faq_contain" id="17-1">
+  <div class="question_blk"><h5>甚麼是myRM？</h5></div>
+<div class="answer_blk">
+    <p> myRM是一個電子銀行軟件使您能夠聯繫您的專屬客戶經理。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-2">
+  <div class="question_blk"><h5>誰能使用myRM？</h5></div>
+<div class="answer_blk">
+    <p>myRM是一個讓渣打香港「優先理財」客戶與專屬客戶經理溝通的官方聊天平台。</p>
+  </div>
+</div>
+<div class="faq_contain" id="17-3">
+  <div class="question_blk"><h5>myRM的服務時間是甚麼？</h5></div>
+<div class="answer_blk">
+    <p> 服務時間與分行營業時間相同。另一方面，亦建議您可提前與您的專屬客戶經理安排預約所想的時間和日期。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-4">
+  <div class="question_blk"><h5>myRM的服務範圍包括甚麼？</h5></div>
+<div class="answer_blk">
+    <p> myRM使您可以在安全登錄後，通過文字及語音對話與我們聯繫。透過myRM，您的客戶經理可以與您分享產品文件，預約進行投資分析。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-5">
+  <div class="question_blk"><h5>我收到的通訊為：「我們需要更多資料以完成您的申請，請您於30天內携同您的身份證明文件親臨我們任何一間分行以完成開戶手續」我該怎麼辦？ </h5></div>
+<div class="answer_blk">
+    <p> 我們可能需要您提供一些證明文件或回答一些跟進問題。請你於30天內携同您的身份證明文件親臨我們任何一間分行以完成開戶手續。為節省等候時間，您可在我們網站預約到指定分行開戶。　 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-6">
+  <div class="question_blk"><h5>如何登入myRM平台？</h5></div>
+<div class="answer_blk">
+    <p> </p>
+    <li>步驟1：登入SC Mobile 流動理財手機程式</li>
+    <li>步驟2：進入「聯絡及支援」（主頁右上角的圖標 ）</li>
+    <li>步驟3：選擇 myRM</li>
+    <p></p>
+  </div>
+</div>
+<div class="faq_contain" id="17-7">
+  <div class="question_blk"><h5>甚麼是聯絡線上客戶顧問?</h5></div>
+<div class="answer_blk">
+    <p>聯絡線上客戶顧問可以讓您在已認證的環境下與我們的線上客戶顧問作即時文字對話。當您與智能助理Stacy對話途中需要額外協助時，您可選擇「聯絡線上客戶顧問」。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-8">
+  <div class="question_blk"><h5>如何聯絡線上客戶顧問?</h5></div>
+<div class="answer_blk">
+    <p> 當您與智能助理Stacy對話時，您可選擇「聯絡線上客戶顧問」。選取後您將會進入另一個對話視窗，並於辦公時間內連接線上客戶顧問。如線上客戶顧問繁忙中，您仍可留下訊息，線上客戶顧問將於稍後時間透過文字訊息回覆您。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-9">
+  <div class="question_blk"><h5>留下訊息後我如何得知線上客戶顧問已回覆?</h5></div>
+<div class="answer_blk">
+    <p>如您已於SC Mobile啟動推送訊息，線上客戶顧問回覆後您將收到推送訊息。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-10">
+  <div class="question_blk"><h5>我可以檢視過往與線上客戶顧問的對話內容嗎? </h5></div>
+<div class="answer_blk">
+    <p>您可以在智能助理Stacy對話視窗的右上角輕觸「…」及「聊天記錄」以檢視過往與線上客戶顧問的聊天記錄。</p>
+  </div>
+</div>
+<div class="faq_contain" id="17-11">
+  <div class="question_blk"><h5>甚麼是智能助理Stacy？</h5></div>
+<div class="answer_blk">
+    <p>智能助理Stacy 可以7X24全天候解答您一般銀行和信用卡的查詢。 </p>
+  </div>
+</div>
+<div class="faq_contain" id="17-12">
+  <div class="question_blk"><h5>如何使用智能助理Stacy？</h5></div>
+<div class="answer_blk">
+    <p>步驟1：登入SC Mobile 流動理財手機程式 <br>
+      步驟2：進入「聯絡及支援」（主頁右上角的圖標 ） <br>
+      步驟3：選擇 「即時對話」 </p>
+  </div>
+</div>
+</div>
+</div>
+		
+    </div>
+</div>
+
+<!--footer>
+    <div class="full_w">
+        <a title="Terms &amp; Conditions" data-context="Footer left column links" href="https://www.sc.com/hk/terms-and-conditions/disclaimer/">Terms &amp; Conditions</a>
+        <br><br>
+        <span class="company">© Standard Chartered Bank (HK) Limited</span>
+    </div>
+</footer-->
+
+</body>
+</html>
